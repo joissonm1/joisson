@@ -1,0 +1,22 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" rx="28" fill="#071A2E"/>
+  <rect x="36" y="36" width="1128" height="628" rx="20" fill="url(#bg)"/>
+  <rect x="94" y="108" width="390" height="484" rx="22" fill="#0B243C" stroke="#218B83"/>
+  <rect x="522" y="108" width="584" height="144" rx="22" fill="#0B243C" stroke="#218B83"/>
+  <rect x="522" y="282" width="280" height="310" rx="22" fill="#0B243C" stroke="#218B83"/>
+  <rect x="826" y="282" width="280" height="310" rx="22" fill="#0B243C" stroke="#218B83"/>
+  <path d="M280 236L305 289L366 296L322 338L333 398L280 370L227 398L238 338L194 296L255 289L280 236Z" fill="#4EE2B6"/>
+  <path d="M572 208H1056" stroke="#3DCBA8" stroke-width="7" stroke-linecap="round"/>
+  <path d="M572 358H752" stroke="#3DCBA8" stroke-width="7" stroke-linecap="round"/>
+  <path d="M572 404H752" stroke="#2D8B8E" stroke-width="7" stroke-linecap="round"/>
+  <path d="M876 362C906 334 936 334 966 362C996 390 1026 390 1056 362" stroke="#3DCBA8" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="1056" cy="362" r="9" fill="#6AF9D1"/>
+  <text x="124" y="164" fill="#7EEFD7" font-size="30" font-family="Arial, sans-serif">Good Health</text>
+  <text x="124" y="202" fill="#4AA89E" font-size="18" font-family="Arial, sans-serif">Teleconsultation Platform</text>
+  <defs>
+    <linearGradient id="bg" x1="126" y1="82" x2="1028" y2="634" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A3149"/>
+      <stop offset="1" stop-color="#08192D"/>
+    </linearGradient>
+  </defs>
+</svg>

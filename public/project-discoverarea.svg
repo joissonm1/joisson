@@ -1,0 +1,26 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" rx="28" fill="#08152E"/>
+  <rect x="36" y="36" width="1128" height="628" rx="20" fill="url(#bg)"/>
+  <g opacity="0.34">
+    <path d="M80 120H1120" stroke="#5CB7FF" stroke-width="1.5"/>
+    <path d="M80 210H1120" stroke="#5CB7FF" stroke-width="1.5"/>
+    <path d="M80 300H1120" stroke="#5CB7FF" stroke-width="1.5"/>
+    <path d="M80 390H1120" stroke="#5CB7FF" stroke-width="1.5"/>
+    <path d="M80 480H1120" stroke="#5CB7FF" stroke-width="1.5"/>
+    <path d="M80 570H1120" stroke="#5CB7FF" stroke-width="1.5"/>
+  </g>
+  <rect x="102" y="122" width="284" height="392" rx="18" fill="#0B1E3F" stroke="#2D79D8"/>
+  <rect x="422" y="122" width="676" height="164" rx="18" fill="#0B1E3F" stroke="#2D79D8"/>
+  <rect x="422" y="314" width="318" height="200" rx="18" fill="#0B1E3F" stroke="#2D79D8"/>
+  <rect x="780" y="314" width="318" height="200" rx="18" fill="#0B1E3F" stroke="#2D79D8"/>
+  <path d="M452 232C492 174 563 170 597 224C631 278 710 288 752 238" stroke="#5BC8FF" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="751" cy="238" r="11" fill="#47E1C5"/>
+  <text x="122" y="178" fill="#86C7FF" font-size="28" font-family="Arial, sans-serif">DiscoverArea</text>
+  <text x="122" y="214" fill="#4D8FCB" font-size="18" font-family="Arial, sans-serif">Career Direction Dashboard</text>
+  <defs>
+    <linearGradient id="bg" x1="130" y1="80" x2="1030" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C2A55"/>
+      <stop offset="1" stop-color="#0A1531"/>
+    </linearGradient>
+  </defs>
+</svg>
