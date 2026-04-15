@@ -171,6 +171,7 @@ export const content = {
       items: [
         "1st place - Olympics Hackathon",
         "2nd place - Mapazzz Hackathon",
+        "Participation - NOSSA Seguros Hackathon",
         "Competitive programming participation",
       ],
     },
@@ -220,22 +221,89 @@ export const content = {
             "Relevant milestones that reflect consistency, technical growth, and competitive mindset.",
           cards: [
             {
+              slug: "olimpiadas-2026",
               title: "1st Place - Olympics Hackathon",
               description:
-                "Awarded first place for delivering an impactful and technically solid solution under competitive constraints.",
-              image: "/hackathons/olympics-hackathon.svg",
+                "At the 2026 Angolan Youth Knowledge and Talent Olympics, representing ISPTEC, our team won the hackathon. Challenge: how to connect universities to the job market. We built Unibridge, a digital platform that connects students, employers, professors, and universities in one ecosystem with personalized recommendations, progress tracking, and professional profiles.",
+              image: "/Olimpiadas/1.png",
+              gallery: [
+                "/Olimpiadas/1.png",
+                "/Olimpiadas/2.png",
+                "/Olimpiadas/3.jpeg",
+                "/Olimpiadas/4.jpeg",
+                "/Olimpiadas/5.jpeg",
+              ],
+              details: {
+                context:
+                  "At the 2026 Angolan Youth Knowledge and Talent Olympics, representing ISPTEC, we won the hackathon.",
+                challenge:
+                  "How to bring universities closer to the job market.",
+                solution:
+                  "Unibridge, a digital platform connecting students, employers, professors, and universities in a single ecosystem with personalized recommendations, progress tracking, and professional profiles.",
+                team: [
+                  {
+                    area: "Backend",
+                    members: [
+                      "Jesse Ingles",
+                      "Willfredy Vieira Dias",
+                      "Sebastiao Sukuakueche",
+                    ],
+                  },
+                  {
+                    area: "Infrastructure",
+                    members: ["Victor Kangombe"],
+                  },
+                  {
+                    area: "Frontend",
+                    members: ["Joisson Miguel", "Orisa Melzira Ebo"],
+                  },
+                ],
+              },
             },
             {
+              slug: "mapazzz-hackathon",
               title: "2nd Place - Mapazzz Hackathon",
               description:
-                "Recognized for product clarity, execution quality, and strong collaboration throughout the challenge.",
+                "Participation in the 1st 42 Luanda Hackathon as part of Team Macrofagos, where we developed MapaZZZ, an intelligent and inclusive mobile solution focused on mapping, monitoring, and mitigating malaria, particularly in low-connectivity regions. Within a limited timeframe, we delivered a fully functional end-to-end system that combined artificial intelligence, offline-first capabilities, USSD communication, and climate data analysis to identify and predict high-risk areas. To enhance the platform's impact, we also integrated teleconsultation modules, enabling users to access basic medical guidance remotely, bridging gaps between communities and healthcare services. The project stood out for its innovative approach, technical depth, and strong commitment to social impact, reinforced by a compelling final presentation.",
               image: "/hackathons/mapazzz-hackathon.svg",
             },
             {
+              slug: "programacao-competitiva",
               title: "Competitive Programming",
               description:
-                "Continuous participation in algorithmic challenges to strengthen problem-solving speed and code precision.",
+                "Our team participated in the ISPTEC Programming Marathon in 2025 and finished 4th place among more than 15 teams. The competition involved complex challenges in algorithms and data structures, requiring speed, logical reasoning, and strong teamwork.",
               image: "/hackathons/competitive-programming.svg",
+            },
+            {
+              slug: "nossa-seguros-hackathon",
+              title: "NOSSA Seguros Hackathon",
+              description:
+                "Participation in the NOSSA Seguros Hackathon across three intense and challenging days. Although we did not win this edition, we left with equally valuable outcomes: practical learning, stronger teamwork, and hands-on experience solving real problems under pressure.",
+              image: "/nossa/1.jpeg",
+              gallery: [
+                "/nossa/1.jpeg",
+                "/nossa/2.jpeg",
+                "/nossa/3.jpeg",
+                "/nossa/4.jpeg",
+              ],
+              details: {
+                context:
+                  "Three intense days of collaborative work in a highly competitive and inspiring environment.",
+                challenge:
+                  "Develop a complete and viable solution for the challenge proposed by NOSSA Seguros within a limited timeframe.",
+                solution:
+                  "Our team built a functional proposal focused on real user value, clear technical direction, and practical applicability.",
+                team: [
+                  {
+                    area: "Key takeaways",
+                    members: [
+                      "Learning through real-world problem solving",
+                      "Healthy competition and strong collaboration",
+                      "Greater motivation and readiness for upcoming hackathons",
+                    ],
+                  },
+                ],
+              },
             },
           ],
         },
@@ -344,8 +412,9 @@ export const content = {
       title: "Conquistas",
       items: [
         "1 lugar - Hackathon das Olimpiadas",
-        "2 lugar - Hackathon Mapazzz",
-        "Participacao em programacao competitiva",
+        "Hackathon Mapazzz (42 Luanda)",
+        "Participacao - Hackathon NOSSA Seguros",
+        "Participação em programação competitiva (Isptec)",
       ],
     },
     profile: {
@@ -393,22 +462,90 @@ export const content = {
             "Marcos relevantes que demonstram consistencia, evolucao tecnica e mentalidade competitiva.",
           cards: [
             {
-              title: "1 Lugar - Hackathon das Olimpiadas",
+              slug: "olimpiadas-2026",
+              title:
+                "1 Lugar - Hackthon Olimpíadas do Saber e Talento Juvenil Angolano 2026",
               description:
-                "Conquista do primeiro lugar com uma solucao de forte impacto e execucao tecnica consistente em ambiente competitivo.",
-              image: "/hackathons/olympics-hackathon.svg",
+                "Olimpiadas do Saber e Talento Juvenil Angolano 2026, representando o ISPTEC, e saimos vencedores do hackathon. O desafio proposto foi: como aproximar as universidades ao mercado de trabalho? A nossa solucao foi a Unibridge, uma plataforma digital que conecta estudantes, empregadores, professores e universidades num unico ecossistema, com recomendacoes personalizadas, acompanhamento de progresso e perfis profissionais. Equipa - Backend: Jesse Ingles, Willfredy Vieira Dias e Sebastiao Sukuakueche; Infraestrutura: Victor Kangombe; Frontend: Joisson Miguel e Orisa Melzira Ebo.",
+              image: "/Olimpiadas/1.png",
+              gallery: [
+                "/Olimpiadas/1.png",
+                "/Olimpiadas/2.png",
+                "/Olimpiadas/3.jpeg",
+                "/Olimpiadas/4.jpeg",
+                "/Olimpiadas/5.jpeg",
+              ],
+              details: {
+                context:
+                  "Olimpiadas do Saber e Talento Juvenil Angolano 2026, representando o ISPTEC, e saimos vencedores do hackathon.",
+                challenge:
+                  "Como aproximar as universidades ao mercado de trabalho?",
+                solution:
+                  "A nossa solucao foi a Unibridge, uma plataforma digital que conecta estudantes, empregadores, professores e universidades num unico ecossistema, com recomendacoes personalizadas, acompanhamento de progresso e perfis profissionais.",
+                team: [
+                  {
+                    area: "Backend",
+                    members: [
+                      "Jesse Ingles",
+                      "Willfredy Vieira Dias",
+                      "Sebastiao Sukuakueche",
+                    ],
+                  },
+                  {
+                    area: "Infraestrutura",
+                    members: ["Victor Kangombe"],
+                  },
+                  {
+                    area: "Frontend",
+                    members: ["Joisson Miguel", "Orisa Melzira Ebo"],
+                  },
+                ],
+              },
             },
             {
-              title: "2 Lugar - Hackathon Mapazzz",
+              slug: "mapazzz-hackathon",
+              title: "Hackathon Mapazzz (42 Luanda)",
               description:
-                "Reconhecimento pela clareza do produto, qualidade da entrega e colaboracao eficaz durante o desafio.",
+                "Participacao no 1º Hackathon da 42 Luanda como parte da Team Macrofagos, onde desenvolvemos o MapaZZZ, uma solucao mobile inteligente e inclusiva focada no mapeamento, monitorizacao e mitigacao da malaria, especialmente em regioes com baixa conectividade. Em tempo limitado, entregamos um sistema completo ponta a ponta que combinou inteligencia artificial, abordagem offline-first, comunicacao via USSD e analise de dados climaticos para identificar e prever zonas de alto risco. Para ampliar o impacto da plataforma, integramos tambem modulos de teleconsulta, permitindo aos utilizadores aceder orientacao medica basica remotamente, reduzindo distancias entre comunidades e servicos de saude. O projeto destacou-se pela abordagem inovadora, profundidade tecnica e forte compromisso com impacto social, reforcado por uma apresentacao final convincente.",
               image: "/hackathons/mapazzz-hackathon.svg",
             },
             {
+              slug: "programacao-competitiva",
               title: "Programacao Competitiva",
               description:
-                "Participacao continua em desafios de algoritmos para reforcar rapidez de resolucao e precisao na implementacao.",
+                "O meu time participou na Maratona de Programacao do ISPTEC no ano de 2025 e ficou em 4 lugar entre mais de 15 equipas. A competicao envolveu desafios complexos de algoritmos e estruturas de dados, exigindo rapidez, raciocinio logico e forte colaboracao em equipa.",
               image: "/hackathons/competitive-programming.svg",
+            },
+            {
+              slug: "nossa-seguros-hackathon",
+              title: "Hackathon NOSSA Seguros",
+              description:
+                "Participei do Hackathon da NOSSA Seguros durante tres dias muito intensos e desafiadores. Tivemos a oportunidade de desenvolver uma solucao para o problema proposto e, embora desta vez nao tenhamos alcancado a vitoria, saimos com algo igualmente valioso: aprendizado e experiencia. Nem sempre se vence uma competicao, mas cada desafio deixa licoes importantes. Foi um ambiente incrivel, com competicao saudavel, muito trabalho em equipe e inumeros aprendizados ao longo de todo o hackathon. Agradeco a organizacao pela excelente iniciativa e a todos os envolvidos por proporcionarem essa experiencia. Com certeza, nos proximos hackathons voltarei mais forte, mais preparado e ainda mais motivado.",
+              image: "/nossa/1.jpeg",
+              gallery: [
+                "/nossa/1.jpeg",
+                "/nossa/2.jpeg",
+                "/nossa/3.jpeg",
+                "/nossa/4.jpeg",
+              ],
+              details: {
+                context:
+                  "Participacao no Hackathon da NOSSA Seguros em tres dias de alta intensidade e colaboracao.",
+                challenge:
+                  "Desenvolver uma solucao para o problema proposto em prazo curto, com foco em viabilidade e impacto.",
+                solution:
+                  "A equipa estruturou e apresentou uma proposta funcional, alinhando clareza tecnica, valor pratico e potencial de evolucao.",
+                team: [
+                  {
+                    area: "Aprendizados",
+                    members: [
+                      "Experiencia real em competicao de inovacao",
+                      "Evolucao tecnica e trabalho em equipe",
+                      "Maior preparacao para os proximos hackathons",
+                    ],
+                  },
+                ],
+              },
             },
           ],
         },
@@ -427,4 +564,10 @@ export const content = {
 
 export function getProjectBySlug(slug: string) {
   return projects.find((project) => project.slug === slug);
+}
+
+export function getAchievementBySlug(slug: string) {
+  return content.en.profile.sections.achievements.cards.find(
+    (achievement) => achievement.slug === slug,
+  );
 }

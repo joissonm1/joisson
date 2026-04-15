@@ -59,11 +59,11 @@ export function ProfileSectionPage({ section }: ProfileSectionPageProps) {
           <section className="grid gap-4 md:grid-cols-2">
             {sectionData.cards.map((card) => (
               <article
-                key={card.title}
+                key={card.slug}
                 data-reveal
-                className="reveal slide-up project-card"
+                className="reveal slide-up project-card achievement-card"
               >
-                <div className="project-preview-media">
+                <div className="project-preview-media achievement-media">
                   <Image
                     src={card.image}
                     alt={`${card.title} image`}
@@ -71,11 +71,18 @@ export function ProfileSectionPage({ section }: ProfileSectionPageProps) {
                     height={700}
                   />
                 </div>
+
                 <div>
                   <h2 className="text-2xl font-semibold">{card.title}</h2>
-                  <p className="mt-3 leading-7 text-muted">
+                  <p className="mt-3 leading-7 text-muted achievement-teaser">
                     {card.description}
                   </p>
+                  <Link
+                    className="inline-link mt-4"
+                    href={`/achievements/${card.slug}`}
+                  >
+                    {text.profile.viewMore}
+                  </Link>
                 </div>
               </article>
             ))}

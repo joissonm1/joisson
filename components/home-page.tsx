@@ -276,7 +276,10 @@ export function HomePage() {
         </section>
 
         <section className="grid gap-4 md:grid-cols-3">
-          <article data-reveal className="reveal slide-up info-card">
+          <article
+            data-reveal
+            className="reveal slide-up info-card flex h-full flex-col"
+          >
             <h2 className="section-title">{text.experience.title}</h2>
             <p className="mt-3 font-semibold">{text.experience.role}</p>
             <p className="text-muted">{text.experience.period}</p>
@@ -285,35 +288,41 @@ export function HomePage() {
                 <li key={point}>{point}</li>
               ))}
             </ul>
-            <div className="mt-6 flex justify-end">
+            <div className="mt-auto flex justify-end pt-6">
               <Link className="inline-link" href="/experience">
                 {text.profile.viewMore}
               </Link>
             </div>
           </article>
 
-          <article data-reveal className="reveal slide-up info-card">
+          <article
+            data-reveal
+            className="reveal slide-up info-card flex h-full flex-col"
+          >
             <h2 className="section-title">{text.education.title}</h2>
             <ul className="mt-4 info-list text-sm text-muted">
               {text.education.items.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <div className="mt-6 flex justify-end">
+            <div className="mt-auto flex justify-end pt-6">
               <Link className="inline-link" href="/education">
                 {text.profile.viewMore}
               </Link>
             </div>
           </article>
 
-          <article data-reveal className="reveal slide-up info-card">
+          <article
+            data-reveal
+            className="reveal slide-up info-card flex h-full flex-col"
+          >
             <h2 className="section-title">{text.achievements.title}</h2>
             <ul className="mt-4 info-list text-sm text-muted">
               {text.achievements.items.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <div className="mt-6 flex justify-end">
+            <div className="mt-auto flex justify-end pt-6">
               <Link className="inline-link" href="/achievements">
                 {text.profile.viewMore}
               </Link>
@@ -331,7 +340,7 @@ export function HomePage() {
           <div className="mt-6 flex flex-wrap gap-3">
             <a
               className="action-button ghost"
-              href="mailto:joisson.miguel@outlook.com"
+              href="mailto:joissonm.miguel@gmail.com"
             >
               {text.contact.email}
             </a>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 import { ProjectCarousel } from "@/components/project-carousel";
 import { SiteShell } from "@/components/site-shell";
 import { usePreferences } from "@/components/preferences-provider";
@@ -11,6 +12,11 @@ import { useRevealOnScroll } from "@/hooks/use-reveal-on-scroll";
 export function ProjectsPage() {
   const { locale } = usePreferences();
   const text = content[locale];
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
+
   useRevealOnScroll();
 
   return (
