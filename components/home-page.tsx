@@ -2,15 +2,128 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import type { IconType } from "react-icons";
+import {
+  SiC,
+  SiCplusplus,
+  SiDocker,
+  SiFastapi,
+  SiGit,
+  SiGoogleanalytics,
+  SiJavascript,
+  SiLinux,
+  SiNestjs,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiOpenjdk,
+  SiPostgresql,
+  SiPrisma,
+  SiPython,
+  SiReact,
+  SiTypescript,
+} from "react-icons/si";
+import {
+  FaChartBar,
+  FaChartLine,
+  FaChartPie,
+  FaDatabase,
+  FaFileExcel,
+  FaPython,
+  FaServer,
+} from "react-icons/fa";
 import { SiteShell } from "@/components/site-shell";
 import { ProjectCarousel } from "@/components/project-carousel";
 import { usePreferences } from "@/components/preferences-provider";
 import { content, projects, skills } from "@/lib/portfolio-content";
 import { useRevealOnScroll } from "@/hooks/use-reveal-on-scroll";
 
+const skillIcons: Record<string, IconType> = {
+  Excel: FaFileExcel,
+  "Power BI": FaChartBar,
+  SQL: FaDatabase,
+  PostgreSQL: SiPostgresql,
+  "Google Analytics": SiGoogleanalytics,
+  NumPy: FaPython,
+  Pandas: FaChartBar,
+  "Data Analysis": FaChartLine,
+  "KPI Dashboards": FaChartPie,
+  C: SiC,
+  "C++": SiCplusplus,
+  Java: SiOpenjdk,
+  Python: SiPython,
+  TypeScript: SiTypescript,
+  JavaScript: SiJavascript,
+  React: SiReact,
+  "Next.js": SiNextdotjs,
+  "Node.js": SiNodedotjs,
+  NestJS: SiNestjs,
+  FastAPI: SiFastapi,
+  Prisma: SiPrisma,
+  MySQL: FaDatabase,
+  MongoDB: FaServer,
+  Docker: SiDocker,
+  Linux: SiLinux,
+  Git: SiGit,
+};
+
+const skillIconColors: Record<string, string> = {
+  Excel: "#22c55e",
+  "Power BI": "#facc15",
+  SQL: "#60a5fa",
+  PostgreSQL: "#3b82f6",
+  "Google Analytics": "#f97316",
+  NumPy: "#4f86c6",
+  Pandas: "#8b5cf6",
+  "Data Analysis": "#22d3ee",
+  "KPI Dashboards": "#f472b6",
+  C: "#5b6ee1",
+  "C++": "#659ad2",
+  Java: "#f97316",
+  Python: "#facc15",
+  TypeScript: "#2f74c0",
+  JavaScript: "#f7df1e",
+  React: "#61dafb",
+  "Next.js": "#e2e8f0",
+  "Node.js": "#22c55e",
+  NestJS: "#ea2845",
+  FastAPI: "#06b6d4",
+  Prisma: "#a78bfa",
+  MySQL: "#2563eb",
+  MongoDB: "#22c55e",
+  Docker: "#2496ed",
+  Linux: "#f4d03f",
+  Git: "#f97316",
+};
+
+function SkillTag({ label }: { label: string }) {
+  const Icon = skillIcons[label];
+  const iconColor = skillIconColors[label];
+
+  return (
+    <span className="tag skill-tag">
+      {Icon ? (
+        <Icon
+          className="skill-tag-icon"
+          style={iconColor ? { color: iconColor } : undefined}
+          aria-hidden="true"
+        />
+      ) : null}
+      <span className="skill-tag-label">{label}</span>
+    </span>
+  );
+}
+
 export function HomePage() {
   const { locale } = usePreferences();
   const text = content[locale];
+  const featuredProjects = projects.slice(0, 2);
+  const skillRows = [
+    { title: text.skills.categories.data, items: skills.data },
+    { title: text.skills.categories.programming, items: skills.programming },
+    { title: text.skills.categories.web, items: skills.web },
+    { title: text.skills.categories.backend, items: skills.backend },
+    { title: text.skills.categories.devops, items: skills.devops },
+  ];
   useRevealOnScroll();
 
   return (
@@ -61,57 +174,17 @@ export function HomePage() {
         <section id="skills" data-reveal className="reveal slide-up space-y-5">
           <h2 className="section-title">{text.skills.title}</h2>
           <p className="text-muted">{text.skills.subtitle}</p>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            <article className="skill-card">
-              <h3>{text.skills.categories.data}</h3>
-              <div className="tag-wrap">
-                {skills.data.map((item) => (
-                  <span key={item} className="tag">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </article>
-            <article className="skill-card">
-              <h3>{text.skills.categories.programming}</h3>
-              <div className="tag-wrap">
-                {skills.programming.map((item) => (
-                  <span key={item} className="tag">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </article>
-            <article className="skill-card">
-              <h3>{text.skills.categories.web}</h3>
-              <div className="tag-wrap">
-                {skills.web.map((item) => (
-                  <span key={item} className="tag">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </article>
-            <article className="skill-card">
-              <h3>{text.skills.categories.backend}</h3>
-              <div className="tag-wrap">
-                {skills.backend.map((item) => (
-                  <span key={item} className="tag">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </article>
-            <article className="skill-card md:col-span-2 xl:col-span-1">
-              <h3>{text.skills.categories.devops}</h3>
-              <div className="tag-wrap">
-                {skills.devops.map((item) => (
-                  <span key={item} className="tag">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </article>
+          <div className="skills-rows">
+            {skillRows.map((group) => (
+              <article key={group.title} className="skill-row">
+                <h3 className="skill-row-title">{group.title}</h3>
+                <div className="tag-wrap skill-row-tags">
+                  {group.items.map((item) => (
+                    <SkillTag key={item} label={item} />
+                  ))}
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -123,7 +196,7 @@ export function HomePage() {
           <h2 className="section-title">{text.projects.title}</h2>
           <p className="text-muted">{text.projects.subtitle}</p>
           <div className="grid gap-4 md:grid-cols-2">
-            {projects.map((project) => (
+            {featuredProjects.map((project) => (
               <article key={project.slug} className="project-card">
                 {project.gallery?.length ? (
                   <ProjectCarousel
@@ -174,6 +247,11 @@ export function HomePage() {
               </article>
             ))}
           </div>
+          <div className="pt-2">
+            <Link className="action-button ghost" href="/projects">
+              {text.projects.viewAll}
+            </Link>
+          </div>
         </section>
 
         <section
@@ -202,29 +280,44 @@ export function HomePage() {
             <h2 className="section-title">{text.experience.title}</h2>
             <p className="mt-3 font-semibold">{text.experience.role}</p>
             <p className="text-muted">{text.experience.period}</p>
-            <ul className="mt-4 space-y-2 text-sm text-muted">
+            <ul className="mt-4 info-list text-sm text-muted">
               {text.experience.points.map((point) => (
-                <li key={point}>- {point}</li>
+                <li key={point}>{point}</li>
               ))}
             </ul>
+            <div className="mt-6 flex justify-end">
+              <Link className="inline-link" href="/experience">
+                {text.profile.viewMore}
+              </Link>
+            </div>
           </article>
 
           <article data-reveal className="reveal slide-up info-card">
             <h2 className="section-title">{text.education.title}</h2>
-            <ul className="mt-4 space-y-2 text-sm text-muted">
+            <ul className="mt-4 info-list text-sm text-muted">
               {text.education.items.map((item) => (
-                <li key={item}>- {item}</li>
+                <li key={item}>{item}</li>
               ))}
             </ul>
+            <div className="mt-6 flex justify-end">
+              <Link className="inline-link" href="/education">
+                {text.profile.viewMore}
+              </Link>
+            </div>
           </article>
 
           <article data-reveal className="reveal slide-up info-card">
             <h2 className="section-title">{text.achievements.title}</h2>
-            <ul className="mt-4 space-y-2 text-sm text-muted">
+            <ul className="mt-4 info-list text-sm text-muted">
               {text.achievements.items.map((item) => (
-                <li key={item}>- {item}</li>
+                <li key={item}>{item}</li>
               ))}
             </ul>
+            <div className="mt-6 flex justify-end">
+              <Link className="inline-link" href="/achievements">
+                {text.profile.viewMore}
+              </Link>
+            </div>
           </article>
         </section>
 
@@ -252,7 +345,7 @@ export function HomePage() {
             </a>
             <a
               className="action-button ghost"
-              href="https://github.com/joissonmiguel"
+              href="https://github.com/joissonm1"
               target="_blank"
               rel="noreferrer"
             >

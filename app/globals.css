@@ -139,6 +139,65 @@ body {
   gap: 0.5rem;
 }
 
+.skills-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.skill-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.78rem 0;
+  border-bottom: 1px solid color-mix(in oklab, var(--text) 12%, transparent);
+}
+
+.skill-row:last-child {
+  border-bottom: none;
+}
+
+.skill-row-title {
+  flex: 0 0 11rem;
+  margin-top: 0.3rem;
+  font-size: 1.05rem;
+  font-weight: 620;
+}
+
+.skill-row-tags {
+  flex: 1;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 0.9rem;
+  background: color-mix(in oklab, var(--bg-elev) 78%, transparent);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--accent-400) 45%, var(--border));
+  background: color-mix(in oklab, var(--accent-500) 12%, var(--bg-elev));
+}
+
+.skill-tag-icon {
+  font-size: 1.02rem;
+  filter: drop-shadow(
+    0 0 8px color-mix(in oklab, currentColor 35%, transparent)
+  );
+}
+
+.skill-tag-label {
+  line-height: 1;
+  letter-spacing: 0.06em;
+}
+
 .action-button {
   display: inline-flex;
   align-items: center;
@@ -319,6 +378,29 @@ body {
   margin-bottom: 0.85rem;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.info-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.info-list li {
+  position: relative;
+  padding-left: 1rem;
+  line-height: 1.55;
+}
+
+.info-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.54rem;
+  left: 0;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent-400), #47d8c7);
+  box-shadow: 0 0 10px color-mix(in oklab, var(--accent-400) 50%, transparent);
 }
 
 .metric-tile {
@@ -546,6 +628,16 @@ body {
 }
 
 @media (max-width: 900px) {
+  .skill-row {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .skill-row-title {
+    flex: initial;
+    margin-top: 0;
+  }
+
   .nav-link {
     display: none;
   }

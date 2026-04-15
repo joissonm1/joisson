@@ -56,35 +56,23 @@ export const projects: Project[] = [
     },
     stack: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL"],
   },
-  {
-    slug: "good-health",
-    title: "Good Health",
-    image: "/project-good-health.svg",
-    shortDescription: {
-      en: "Digital health platform focused on teleconsultation workflows and secure authentication.",
-      pt: "Plataforma digital de saúde focada em fluxos de teleconsulta e autenticação segura.",
-    },
-    longDescription: {
-      en: "Good Health centralizes appointment scheduling, teleconsultation access, and patient records into one secure workflow. The system emphasizes reliability, traceability, and data privacy.",
-      pt: "O Good Health centraliza agendamento, acesso à teleconsulta e registros de pacientes em um fluxo seguro. O sistema enfatiza confiabilidade, rastreabilidade e privacidade de dados.",
-    },
-    impact: {
-      en: "Improved care accessibility and reduced process friction with secure, streamlined digital interactions.",
-      pt: "Melhorou a acessibilidade ao cuidado e reduziu atritos operacionais com interações digitais seguras e otimizadas.",
-    },
-    role: {
-      en: "Architecture planning, backend integration, and performance-oriented UX decisions.",
-      pt: "Planejamento de arquitetura, integração de backend e decisões de UX orientadas a desempenho.",
-    },
-    stack: ["React", "Node.js", "NestJS", "FastAPI", "Docker", "PostgreSQL"],
-  },
 ];
 
 export const skills = {
-  data: ["Excel", "Power BI", "SQL", "PostgreSQL"],
-  programming: ["Python", "TypeScript", "JavaScript"],
-  web: ["React", "Next.js", "Tailwind CSS"],
-  backend: ["Node.js", "NestJS", "FastAPI"],
+  data: [
+    "Excel",
+    "Power BI",
+    "SQL",
+    "PostgreSQL",
+    "Google Analytics",
+    "NumPy",
+    "Pandas",
+    "Data Analysis",
+    "KPI Dashboards",
+  ],
+  programming: ["C", "C++", "Java", "Python", "TypeScript", "JavaScript"],
+  web: ["React", "Next.js"],
+  backend: ["Node.js", "NestJS", "FastAPI", "Prisma", "MySQL", "MongoDB"],
   devops: ["Docker", "Linux", "Git"],
 };
 
@@ -119,6 +107,9 @@ export const content = {
         "Analytical thinking",
         "Problem solving",
         "Data communication",
+        "Leadership",
+        "Proactivity",
+        "Collaboration",
       ],
     },
     skills: {
@@ -140,6 +131,7 @@ export const content = {
       stackLabel: "Stack",
       details: "See details",
       seeMore: "See more",
+      viewAll: "View all projects",
       visitProject: "Visit project",
       allProjectsTitle: "Project Deep Dive",
       allProjectsSubtitle:
@@ -161,9 +153,10 @@ export const content = {
       role: "Project Manager",
       period: "2026 - Present",
       points: [
-        "Data-driven decisions",
-        "Management process improvement",
-        "Efficiency improvement",
+        "Data-driven decision making",
+        "Management process optimization",
+        "Tutor at 42 Luanda",
+        "Operational efficiency improvement",
       ],
     },
     education: {
@@ -175,7 +168,78 @@ export const content = {
     },
     achievements: {
       title: "Achievements",
-      items: ["Hackathons - 2nd place Mapazzz", "Competitive Programming"],
+      items: [
+        "1st place - Olympics Hackathon",
+        "2nd place - Mapazzz Hackathon",
+        "Competitive programming participation",
+      ],
+    },
+    profile: {
+      viewMore: "View more",
+      backHome: "Back to Home",
+      sections: {
+        experience: {
+          title: "Professional Experience",
+          subtitle:
+            "Highlights of my experience leading projects, optimizing operations, and driving measurable results.",
+          experiences: [
+            {
+              role: "Project Manager",
+              organization: "Digital Projects",
+              period: "2026 - Present",
+              points: [
+                "Led project planning and delivery workflows with clear milestones and accountability.",
+                "Implemented data-driven monitoring practices to support strategic and operational decisions.",
+                "Streamlined internal routines to reduce bottlenecks and increase execution efficiency.",
+              ],
+            },
+            {
+              role: "Tutor",
+              organization: "42 Luanda",
+              period: "2026 - Present",
+              points: [
+                "Support peers in programming fundamentals, debugging, and project structuring.",
+                "Guide students on collaborative problem-solving and code quality practices.",
+              ],
+            },
+          ],
+        },
+        education: {
+          title: "Academic Background",
+          subtitle:
+            "Foundational and practical education focused on software engineering and analytical thinking.",
+          items: [
+            "Computer Engineering - ISPTEC.",
+            "42 Luanda - Software Engineering.",
+            "Continuous self-learning in data analysis, systems design, and product-oriented development.",
+          ],
+        },
+        achievements: {
+          title: "Achievements",
+          subtitle:
+            "Relevant milestones that reflect consistency, technical growth, and competitive mindset.",
+          cards: [
+            {
+              title: "1st Place - Olympics Hackathon",
+              description:
+                "Awarded first place for delivering an impactful and technically solid solution under competitive constraints.",
+              image: "/hackathons/olympics-hackathon.svg",
+            },
+            {
+              title: "2nd Place - Mapazzz Hackathon",
+              description:
+                "Recognized for product clarity, execution quality, and strong collaboration throughout the challenge.",
+              image: "/hackathons/mapazzz-hackathon.svg",
+            },
+            {
+              title: "Competitive Programming",
+              description:
+                "Continuous participation in algorithmic challenges to strengthen problem-solving speed and code precision.",
+              image: "/hackathons/competitive-programming.svg",
+            },
+          ],
+        },
+      },
     },
     contact: {
       title: "Contact",
@@ -216,6 +280,9 @@ export const content = {
         "Pensamento analitico",
         "Resolucao de problemas",
         "Comunicacao de dados",
+        "Lideranca",
+        "Proatividade",
+        "Colaboracao",
       ],
     },
     skills: {
@@ -238,6 +305,7 @@ export const content = {
       stackLabel: "Stack",
       details: "Ver detalhes",
       seeMore: "Ver mais",
+      viewAll: "Ver todos os projetos",
       visitProject: "Visitar projeto",
       allProjectsTitle: "Detalhamento dos Projetos",
       allProjectsSubtitle:
@@ -259,21 +327,92 @@ export const content = {
       role: "Project Manager",
       period: "2026 - Presente",
       points: [
-        "Decisoes orientadas por dados",
-        "Melhoria de processos de gestao",
-        "Aumento de eficiencia",
+        "Tomada de decisao orientada por dados",
+        "Otimizacao de processos de gestao",
+        "Atuacao como tutor na 42 Luanda",
+        "Aumento da eficiencia operacional",
       ],
     },
     education: {
       title: "Formacao",
       items: [
-        "Engenharia Informatica (ISPTEC)",
+        "Engenharia Informatica - ISPTEC",
         "42 Luanda (Engenharia de Software)",
       ],
     },
     achievements: {
       title: "Conquistas",
-      items: ["Hackathons - 2 lugar no Mapazzz", "Programacao competitiva"],
+      items: [
+        "1 lugar - Hackathon das Olimpiadas",
+        "2 lugar - Hackathon Mapazzz",
+        "Participacao em programacao competitiva",
+      ],
+    },
+    profile: {
+      viewMore: "Ver mais",
+      backHome: "Voltar ao Inicio",
+      sections: {
+        experience: {
+          title: "Experiencia Profissional",
+          subtitle:
+            "Principais pontos da minha atuacao em lideranca de projetos, otimizacao operacional e melhoria de resultados.",
+          experiences: [
+            {
+              role: "Project Manager",
+              organization: "Projetos Digitais",
+              period: "2026 - Presente",
+              points: [
+                "Lideranca de planeamento e execucao de projetos com metas claras e acompanhamento continuo.",
+                "Aplicacao de praticas orientadas por dados para apoiar decisoes estrategicas e operacionais.",
+                "Otimizacao de rotinas internas para reduzir gargalos e aumentar a eficiencia na entrega.",
+              ],
+            },
+            {
+              role: "Tutor",
+              organization: "42 Luanda",
+              period: "2026 - Presente",
+              points: [
+                "Acompanhamento de colegas em fundamentos de programacao, depuracao e estruturacao de projetos.",
+                "Orientacao em resolucao colaborativa de problemas e boas praticas de qualidade de codigo.",
+              ],
+            },
+          ],
+        },
+        education: {
+          title: "Formacao Academica",
+          subtitle:
+            "Base tecnica e pratica em engenharia de software, analise de dados e resolucao estruturada de problemas.",
+          items: [
+            "Engenharia Informatica - ISPTEC.",
+            "42 Luanda - Engenharia de Software.",
+          ],
+        },
+        achievements: {
+          title: "Conquistas",
+          subtitle:
+            "Marcos relevantes que demonstram consistencia, evolucao tecnica e mentalidade competitiva.",
+          cards: [
+            {
+              title: "1 Lugar - Hackathon das Olimpiadas",
+              description:
+                "Conquista do primeiro lugar com uma solucao de forte impacto e execucao tecnica consistente em ambiente competitivo.",
+              image: "/hackathons/olympics-hackathon.svg",
+            },
+            {
+              title: "2 Lugar - Hackathon Mapazzz",
+              description:
+                "Reconhecimento pela clareza do produto, qualidade da entrega e colaboracao eficaz durante o desafio.",
+              image: "/hackathons/mapazzz-hackathon.svg",
+            },
+            {
+              title: "Programacao Competitiva",
+              description:
+                "Participacao continua em desafios de algoritmos para reforcar rapidez de resolucao e precisao na implementacao.",
+              image: "/hackathons/competitive-programming.svg",
+            },
+          ],
+        },
+      },
     },
     contact: {
       title: "Contato",
