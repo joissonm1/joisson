@@ -34,6 +34,11 @@ export const metadata: Metadata = {
       "Transforming data into decisions and engineering digital solutions with measurable impact.",
     type: "website",
   },
+  icons: {
+    icon: "/avatar.png",
+    shortcut: "/avatar.png",
+    apple: "/avatar.png",
+  },
 };
 
 export default function RootLayout({

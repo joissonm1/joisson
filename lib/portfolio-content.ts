@@ -320,7 +320,7 @@ export const content = {
   },
   pt: {
     nav: {
-      home: "Inicio",
+      home: "Início",
       about: "Sobre",
       skills: "Skills",
       projects: "Projetos",
@@ -334,32 +334,32 @@ export const content = {
     },
     hero: {
       name: "Joisson Miguel",
-      headline: "Data Analyst & Software Engineer",
+      headline: "Analista de Dados & Engenheiro de Software",
       subheadline:
-        "Transformando dados em decisoes e construindo solucoes digitais com impacto mensuravel.",
+        "Transformando dados em decisões e construindo soluções digitais com impacto mensurável.",
       ctaProjects: "Ver Projetos",
       ctaContact: "Contato",
     },
     about: {
       title: "Sobre Mim",
       summary:
-        "Estudante de Engenharia Informatica com experiencia como Project Manager, focado em Analise de Dados e solucoes digitais para otimizar processos e apoiar melhores decisoes.",
+        "Estudante de Engenharia Informática com experiência como Project Manager, focado em Análise de Dados e soluções digitais para otimizar processos e apoiar melhores decisões.",
       highlights: [
-        "Pensamento analitico",
-        "Resolucao de problemas",
-        "Comunicacao de dados",
-        "Lideranca",
+        "Pensamento analítico",
+        "Resolução de problemas",
+        "Comunicação de dados",
+        "Liderança",
         "Proatividade",
-        "Colaboracao",
+        "Colaboração",
       ],
     },
     skills: {
       title: "Skills",
       subtitle:
-        "Stack tecnico organizado como um painel operacional de analise.",
+        "Stack técnico organizado como um painel operacional de análise.",
       categories: {
-        data: "Analise de Dados",
-        programming: "Programacao",
+        data: "Análise de Dados",
+        programming: "Programação",
         web: "Web",
         backend: "Backend",
         devops: "DevOps",
@@ -368,7 +368,7 @@ export const content = {
     projects: {
       title: "Projetos",
       subtitle:
-        "Produtos onde execucao de software encontra direcao por dados.",
+        "Produtos onde execução de software encontra direção por dados.",
       impactLabel: "Impacto",
       stackLabel: "Stack",
       details: "Ver detalhes",
@@ -377,63 +377,63 @@ export const content = {
       visitProject: "Visitar projeto",
       allProjectsTitle: "Detalhamento dos Projetos",
       allProjectsSubtitle:
-        "Visao detalhada de arquitetura, impacto e processo de decisao.",
-      backHome: "Voltar ao Inicio",
+        "Visão detalhada de arquitetura, impacto e processo de decisão.",
+      backHome: "Voltar ao Início",
     },
     identity: {
-      title: "Identidade Analitica",
+      title: "Identidade Analítica",
       subtitle:
-        "Uma camada visual inspirada em dashboards operacionais, metricas e movimento de tendencia.",
+        "Uma camada visual inspirada em dashboards operacionais, métricas e movimento de tendência.",
       metrics: [
         { label: "Visibilidade de processos", value: "+37%" },
-        { label: "Velocidade de decisao", value: "2.4x" },
-        { label: "Consistencia de dados", value: "99.2%" },
+        { label: "Velocidade de decisão", value: "2.4x" },
+        { label: "Consistência de dados", value: "99.2%" },
       ],
     },
     experience: {
-      title: "Experiencia",
+      title: "Experiência",
       role: "Project Manager",
       period: "2026 - Presente",
       points: [
-        "Tomada de decisao orientada por dados",
-        "Otimizacao de processos de gestao",
-        "Atuacao como tutor na 42 Luanda",
-        "Aumento da eficiencia operacional",
+        "Tomada de decisão orientada por dados",
+        "Otimização de processos de gestão",
+        "Atuação como tutor na 42 Luanda",
+        "Aumento da eficiência operacional",
       ],
     },
     education: {
-      title: "Formacao",
+      title: "Formação",
       items: [
-        "Engenharia Informatica - ISPTEC",
+        "Engenharia Informática - ISPTEC",
         "42 Luanda (Engenharia de Software)",
       ],
     },
     achievements: {
       title: "Conquistas",
       items: [
-        "1 lugar - Hackathon das Olimpiadas",
+        "1 lugar - Hackathon das Olimpíadas",
         "Hackathon Mapazzz (42 Luanda)",
-        "Participacao - Hackathon NOSSA Seguros",
+        "Participação - Hackathon NOSSA Seguros",
         "Participação em programação competitiva (Isptec)",
       ],
     },
     profile: {
       viewMore: "Ver mais",
-      backHome: "Voltar ao Inicio",
+      backHome: "Voltar ao Início",
       sections: {
         experience: {
-          title: "Experiencia Profissional",
+          title: "Experiência Profissional",
           subtitle:
-            "Principais pontos da minha atuacao em lideranca de projetos, otimizacao operacional e melhoria de resultados.",
+            "Principais pontos da minha atuação em liderança de projetos, otimização operacional e melhoria de resultados.",
           experiences: [
             {
               role: "Project Manager",
               organization: "Projetos Digitais",
               period: "2026 - Presente",
               points: [
-                "Lideranca de planeamento e execucao de projetos com metas claras e acompanhamento continuo.",
-                "Aplicacao de praticas orientadas por dados para apoiar decisoes estrategicas e operacionais.",
-                "Otimizacao de rotinas internas para reduzir gargalos e aumentar a eficiencia na entrega.",
+                "Liderança de planeamento e execução de projetos com metas claras e acompanhamento contínuo.",
+                "Aplicação de práticas orientadas por dados para apoiar decisões estratégicas e operacionais.",
+                "Otimização de rotinas internas para reduzir gargalos e aumentar a eficiência na entrega.",
               ],
             },
             {
@@ -441,32 +441,32 @@ export const content = {
               organization: "42 Luanda",
               period: "2026 - Presente",
               points: [
-                "Acompanhamento de colegas em fundamentos de programacao, depuracao e estruturacao de projetos.",
-                "Orientacao em resolucao colaborativa de problemas e boas praticas de qualidade de codigo.",
+                "Acompanhamento de colegas em fundamentos de programação, depuração e estruturação de projetos.",
+                "Orientação em resolução colaborativa de problemas e boas práticas de qualidade de código.",
               ],
             },
           ],
         },
         education: {
-          title: "Formacao Academica",
+          title: "Formação Académica",
           subtitle:
-            "Base tecnica e pratica em engenharia de software, analise de dados e resolucao estruturada de problemas.",
+            "Base técnica e prática em engenharia de software, análise de dados e resolução estruturada de problemas.",
           items: [
-            "Engenharia Informatica - ISPTEC.",
+            "Engenharia Informática - ISPTEC.",
             "42 Luanda - Engenharia de Software.",
           ],
         },
         achievements: {
           title: "Conquistas",
           subtitle:
-            "Marcos relevantes que demonstram consistencia, evolucao tecnica e mentalidade competitiva.",
+            "Marcos relevantes que demonstram consistência, evolução técnica e mentalidade competitiva.",
           cards: [
             {
               slug: "olimpiadas-2026",
               title:
                 "1 Lugar - Hackthon Olimpíadas do Saber e Talento Juvenil Angolano 2026",
               description:
-                "Olimpiadas do Saber e Talento Juvenil Angolano 2026, representando o ISPTEC, e saimos vencedores do hackathon. O desafio proposto foi: como aproximar as universidades ao mercado de trabalho? A nossa solucao foi a Unibridge, uma plataforma digital que conecta estudantes, empregadores, professores e universidades num unico ecossistema, com recomendacoes personalizadas, acompanhamento de progresso e perfis profissionais. Equipa - Backend: Jesse Ingles, Willfredy Vieira Dias e Sebastiao Sukuakueche; Infraestrutura: Victor Kangombe; Frontend: Joisson Miguel e Orisa Melzira Ebo.",
+                "Olimpíadas do Saber e Talento Juvenil Angolano 2026, representando o ISPTEC, e saímos vencedores do hackathon. O desafio proposto foi: como aproximar as universidades ao mercado de trabalho? A nossa solução foi a Unibridge, uma plataforma digital que conecta estudantes, empregadores, professores e universidades num único ecossistema, com recomendações personalizadas, acompanhamento de progresso e perfis profissionais. Equipa - Backend: Jesse Ingles, Willfredy Vieira Dias e Sebastião Sukuakueche; Infraestrutura: Victor Kangombe; Frontend: Joisson Miguel e Orisa Melzira Ebo.",
               image: "/Olimpiadas/1.png",
               gallery: [
                 "/Olimpiadas/1.png",
@@ -477,18 +477,18 @@ export const content = {
               ],
               details: {
                 context:
-                  "Olimpiadas do Saber e Talento Juvenil Angolano 2026, representando o ISPTEC, e saimos vencedores do hackathon.",
+                  "Olimpíadas do Saber e Talento Juvenil Angolano 2026, representando o ISPTEC, e saímos vencedores do hackathon.",
                 challenge:
                   "Como aproximar as universidades ao mercado de trabalho?",
                 solution:
-                  "A nossa solucao foi a Unibridge, uma plataforma digital que conecta estudantes, empregadores, professores e universidades num unico ecossistema, com recomendacoes personalizadas, acompanhamento de progresso e perfis profissionais.",
+                  "A nossa solução foi a Unibridge, uma plataforma digital que conecta estudantes, empregadores, professores e universidades num único ecossistema, com recomendações personalizadas, acompanhamento de progresso e perfis profissionais.",
                 team: [
                   {
                     area: "Backend",
                     members: [
                       "Jesse Ingles",
                       "Willfredy Vieira Dias",
-                      "Sebastiao Sukuakueche",
+                      "Sebastião Sukuakueche",
                     ],
                   },
                   {
@@ -506,21 +506,21 @@ export const content = {
               slug: "mapazzz-hackathon",
               title: "Hackathon Mapazzz (42 Luanda)",
               description:
-                "Participacao no 1º Hackathon da 42 Luanda como parte da Team Macrofagos, onde desenvolvemos o MapaZZZ, uma solucao mobile inteligente e inclusiva focada no mapeamento, monitorizacao e mitigacao da malaria, especialmente em regioes com baixa conectividade. Em tempo limitado, entregamos um sistema completo ponta a ponta que combinou inteligencia artificial, abordagem offline-first, comunicacao via USSD e analise de dados climaticos para identificar e prever zonas de alto risco. Para ampliar o impacto da plataforma, integramos tambem modulos de teleconsulta, permitindo aos utilizadores aceder orientacao medica basica remotamente, reduzindo distancias entre comunidades e servicos de saude. O projeto destacou-se pela abordagem inovadora, profundidade tecnica e forte compromisso com impacto social, reforcado por uma apresentacao final convincente.",
+                "Participação no 1º Hackathon da 42 Luanda como parte da Team Macrofagos, onde desenvolvemos o MapaZZZ, uma solução mobile inteligente e inclusiva focada no mapeamento, monitorização e mitigação da malária, especialmente em regiões com baixa conectividade. Em tempo limitado, entregamos um sistema completo ponta a ponta que combinou inteligência artificial, abordagem offline-first, comunicação via USSD e análise de dados climáticos para identificar e prever zonas de alto risco. Para ampliar o impacto da plataforma, integramos também módulos de teleconsulta, permitindo aos utilizadores aceder orientação médica básica remotamente, reduzindo distâncias entre comunidades e serviços de saúde. O projeto destacou-se pela abordagem inovadora, profundidade técnica e forte compromisso com impacto social, reforçado por uma apresentação final convincente.",
               image: "/hackathons/mapazzz-hackathon.svg",
             },
             {
               slug: "programacao-competitiva",
-              title: "Programacao Competitiva",
+              title: "Programação Competitiva",
               description:
-                "O meu time participou na Maratona de Programacao do ISPTEC no ano de 2025 e ficou em 4 lugar entre mais de 15 equipas. A competicao envolveu desafios complexos de algoritmos e estruturas de dados, exigindo rapidez, raciocinio logico e forte colaboracao em equipa.",
+                "O meu time participou na Maratona de Programação do ISPTEC no ano de 2025 e ficou em 4 lugar entre mais de 15 equipas. A competição envolveu desafios complexos de algoritmos e estruturas de dados, exigindo rapidez, raciocínio lógico e forte colaboração em equipa.",
               image: "/hackathons/competitive-programming.svg",
             },
             {
               slug: "nossa-seguros-hackathon",
               title: "Hackathon NOSSA Seguros",
               description:
-                "Participei do Hackathon da NOSSA Seguros durante tres dias muito intensos e desafiadores. Tivemos a oportunidade de desenvolver uma solucao para o problema proposto e, embora desta vez nao tenhamos alcancado a vitoria, saimos com algo igualmente valioso: aprendizado e experiencia. Nem sempre se vence uma competicao, mas cada desafio deixa licoes importantes. Foi um ambiente incrivel, com competicao saudavel, muito trabalho em equipe e inumeros aprendizados ao longo de todo o hackathon. Agradeco a organizacao pela excelente iniciativa e a todos os envolvidos por proporcionarem essa experiencia. Com certeza, nos proximos hackathons voltarei mais forte, mais preparado e ainda mais motivado.",
+                "Participei do Hackathon da NOSSA Seguros durante três dias muito intensos e desafiadores. Tivemos a oportunidade de desenvolver uma solução para o problema proposto e, embora desta vez não tenhamos alcançado a vitória, saímos com algo igualmente valioso: aprendizado e experiência. Nem sempre se vence uma competição, mas cada desafio deixa lições importantes. Foi um ambiente incrível, com competição saudável, muito trabalho em equipe e inúmeros aprendizados ao longo de todo o hackathon. Agradeço a organização pela excelente iniciativa e a todos os envolvidos por proporcionarem essa experiência. Com certeza, nos próximos hackathons voltarei mais forte, mais preparado e ainda mais motivado.",
               image: "/nossa/1.jpeg",
               gallery: [
                 "/nossa/1.jpeg",
@@ -530,18 +530,18 @@ export const content = {
               ],
               details: {
                 context:
-                  "Participacao no Hackathon da NOSSA Seguros em tres dias de alta intensidade e colaboracao.",
+                  "Participação no Hackathon da NOSSA Seguros em três dias de alta intensidade e colaboração.",
                 challenge:
-                  "Desenvolver uma solucao para o problema proposto em prazo curto, com foco em viabilidade e impacto.",
+                  "Desenvolver uma solução para o problema proposto em prazo curto, com foco em viabilidade e impacto.",
                 solution:
-                  "A equipa estruturou e apresentou uma proposta funcional, alinhando clareza tecnica, valor pratico e potencial de evolucao.",
+                  "A equipa estruturou e apresentou uma proposta funcional, alinhando clareza técnica, valor prático e potencial de evolução.",
                 team: [
                   {
                     area: "Aprendizados",
                     members: [
-                      "Experiencia real em competicao de inovacao",
-                      "Evolucao tecnica e trabalho em equipe",
-                      "Maior preparacao para os proximos hackathons",
+                      "Experiência real em competição de inovação",
+                      "Evolução técnica e trabalho em equipe",
+                      "Maior preparação para os próximos hackathons",
                     ],
                   },
                 ],
@@ -554,7 +554,7 @@ export const content = {
     contact: {
       title: "Contato",
       subtitle:
-        "Aberto a oportunidades em Analise de Dados e Engenharia de Software.",
+        "Aberto a oportunidades em Análise de Dados e Engenharia de Software.",
       email: "Email",
       linkedin: "LinkedIn",
       github: "GitHub",
