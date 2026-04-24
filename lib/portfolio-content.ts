@@ -143,9 +143,9 @@ export const content = {
       subtitle:
         "A visual layer inspired by operational dashboards, metrics, and trend movement.",
       metrics: [
-        { label: "Process visibility", value: "+37%" },
-        { label: "Decision speed", value: "2.4x" },
-        { label: "Data consistency", value: "99.2%" },
+        { label: "Process visibility", value: "Real-time" },
+        { label: "Decision speed", value: "Action-ready" },
+        { label: "Data consistency", value: "Single source" },
       ],
     },
     experience: {
@@ -385,9 +385,9 @@ export const content = {
       subtitle:
         "Uma camada visual inspirada em dashboards operacionais, métricas e movimento de tendência.",
       metrics: [
-        { label: "Visibilidade de processos", value: "+37%" },
-        { label: "Velocidade de decisão", value: "2.4x" },
-        { label: "Consistência de dados", value: "99.2%" },
+        { label: "Visibilidade de processos", value: "Tempo real" },
+        { label: "Velocidade de decisão", value: "Pronto para ação" },
+        { label: "Consistência de dados", value: "Fonte única" },
       ],
     },
     experience: {
