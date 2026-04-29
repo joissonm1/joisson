@@ -239,6 +239,14 @@ export function SiteShell({
               {labels.controls.language}
             </button>
 
+            <a
+              className="control-button"
+              href={`/api/cv?locale=${locale}`}
+              aria-label="Download CV"
+            >
+              CV
+            </a>
+
             <button
               type="button"
               className="control-button"
