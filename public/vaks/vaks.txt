@@ -1,0 +1,29 @@
+VAKS — Projeto Final na 42 Luanda (ft_transcendence)
+
+Após semanas intensas de desenvolvimento, temos o prazer de apresentar o nosso projeto final: VAKS.
+
+O VAKS é uma plataforma de angariação de fundos inspirada no conceito de “vaquinha”, mas com um diferencial: integra uma criptomoeda interna simulada, criando um ecossistema digital de confiança, transparência e colaboração.
+
+Como funciona?
+
+Cada utilizador possui uma carteira digital VAKS, onde pode:
+
+• Receber e enviar fundos
+• Contribuir para campanhas
+• Acompanhar todas as transações em tempo real
+
+A plataforma suporta dois tipos de campanhas:
+
+Vaquinhas Públicas
+
+• Abertas a qualquer utilizador
+• Visíveis publicamente
+• Ideais para causas sociais, emergências ou projetos criativos
+
+Vaquinhas Privadas
+
+• Baseadas em convites
+• Com controlo de permissões (sudo / vaker)
+• Perfeitas para grupos fechados (amigos, família, equipas)
+
+Tecnologias: React, node + nestjs, postgre, blockchain

@@ -56,6 +56,97 @@ export const projects: Project[] = [
     },
     stack: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL"],
   },
+  {
+    slug: "boa-saude",
+    title: "Boa Saúde",
+    image: "/boa/boa.png",
+    gallery: [
+      "/boa/boa.png",
+      "/boa/boa2.png",
+      "/boa/boa3.png",
+      "/boa/boa4.png",
+      "/boa/boa5.png",
+      "/boa/boa6.png",
+    ],
+    shortDescription: {
+      en: "A telemedicine platform connecting patients to independent doctors for remote consultations, with a geolocated directory of clinics and hospitals.",
+      pt: "Uma plataforma de telemedicina que conecta pacientes a médicos independentes para consultas remotas, com um diretório geolocalizado de clínicas e hospitais.",
+    },
+    longDescription: {
+      en: "Boa Saúde is a telemedicine platform that connects patients to independent doctors for remote consultations via video or phone. It also integrates a geolocated directory of clinics and hospitals, allowing patients to find nearby healthcare services. The platform enables doctors to register, define their availability, and earn income by attending patients remotely, while clinics can list their services and available procedures.",
+      pt: "O Boa Saúde é uma plataforma de telemedicina que conecta pacientes a médicos independentes para consultas remotas por vídeo ou telefone. Integra também um diretório geolocalizado de clínicas e hospitais, permitindo que pacientes encontrem serviços de saúde próximos. A plataforma permite que médicos se registem, definam sua disponibilidade e gerem renda atendendo pacientes remotamente, enquanto clínicas podem cadastrar seus serviços e procedimentos disponíveis.",
+    },
+    impact: {
+      en: "Democratizes access to healthcare in Angola by eliminating geographic and time barriers, optimizing professionals' time, and providing patients with convenience and transparency in finding essential health services.",
+      pt: "Democratiza o acesso à saúde em Angola ao eliminar barreiras geográficas e temporais, otimizando o tempo dos profissionais e proporcionando aos pacientes conveniência e transparência na localização de serviços essenciais de saúde.",
+    },
+    role: {
+      en: "Full-stack development and product architecture design.",
+      pt: "Desenvolvimento full-stack e design da arquitetura do produto.",
+    },
+    stack: ["React", "Node.js", "NestJS", "PostgreSQL"],
+  },
+  {
+    slug: "smartquote",
+    title: "SmartQuote",
+    image: "/smart/smart.png",
+    gallery: [
+      "/smart/smart.png",
+      "/smart/smart1.png",
+      "/smart/smart2.png",
+      "/smart/smart3.png",
+      "/smart/smart4.png",
+      "/smart/smart5.png",
+      "/smart/smart6.png",
+    ],
+    shortDescription: {
+      en: "An AI-powered platform that automates the procurement quotation pipeline — from email parsing to supplier comparison and approval workflows.",
+      pt: "Uma plataforma com IA que automatiza o pipeline de cotação de compras — desde a leitura de e-mails até a comparação de fornecedores e fluxos de aprovação.",
+    },
+    longDescription: {
+      en: "SmartQuote was developed during a hackathon to solve a real procurement problem: companies receive quotation requests by email, and the traditional process is manual, slow, and error-prone. SmartQuote transforms this into an automated pipeline: request capture → AI interpretation → supplier contact → proposal comparison → quotation generation → approval workflow → history and analytics. It uses NLP to extract structured data from emails, classifies and normalizes items, suggests prices based on history, and includes an AI assistant for quick queries on quotation status and supplier performance.",
+      pt: "O SmartQuote foi desenvolvido durante um hackathon para resolver um problema real de procurement: empresas recebem pedidos de cotação por e-mail e o processo tradicional é manual, lento e propenso a erros. O SmartQuote transforma isso num pipeline automatizado: captura do pedido → interpretação com IA → contacto de fornecedores → comparação de propostas → geração da cotação → workflow de aprovação → histórico e analytics. Utiliza NLP para extrair dados estruturados de e-mails, classifica e normaliza itens, sugere preços com base em histórico e inclui um assistente com IA para consultas rápidas sobre status de cotações e desempenho de fornecedores.",
+    },
+    impact: {
+      en: "Reduces operational time, standardizes responses, and increases compliance and control in the procurement process through intelligent automation and audit trails.",
+      pt: "Reduz o tempo operacional, padroniza respostas e aumenta o compliance e controlo no processo de compras através de automação inteligente e trilhas de auditoria.",
+    },
+    role: {
+      en: "Full-stack development with AI integration and system architecture.",
+      pt: "Desenvolvimento full-stack com integração de IA e arquitetura do sistema.",
+    },
+    stack: ["React", "Node.js", "NestJS", "PostgreSQL", "Python"],
+  },
+  {
+    slug: "vaks",
+    title: "VAKS",
+    image: "/vaks/vaks1.png",
+    gallery: [
+      "/vaks/vaks1.png",
+      "/vaks/vaks2.png",
+      "/vaks/vaks3.png",
+      "/vaks/vaks4.png",
+      "/vaks/vaks5.png",
+      "/vaks/vaks6.png",
+    ],
+    shortDescription: {
+      en: "A crowdfunding platform inspired by 'vaquinha' with an integrated simulated cryptocurrency ecosystem — the final project at 42 Luanda.",
+      pt: "Uma plataforma de angariação de fundos inspirada no conceito de 'vaquinha' com um ecossistema de criptomoeda simulada integrado — projeto final na 42 Luanda.",
+    },
+    longDescription: {
+      en: "VAKS is a crowdfunding platform built as the final project (ft_transcendence) at 42 Luanda. It features a simulated internal cryptocurrency that creates a digital ecosystem of trust, transparency, and collaboration. Each user has a VAKS digital wallet to send, receive, and contribute funds. The platform supports public campaigns (open to all, ideal for social causes and creative projects) and private campaigns (invite-based with permission controls, perfect for closed groups like friends, family, or teams).",
+      pt: "O VAKS é uma plataforma de angariação de fundos construída como projeto final (ft_transcendence) na 42 Luanda. Integra uma criptomoeda interna simulada, criando um ecossistema digital de confiança, transparência e colaboração. Cada utilizador possui uma carteira digital VAKS para enviar, receber e contribuir com fundos. A plataforma suporta campanhas públicas (abertas a todos, ideais para causas sociais e projetos criativos) e campanhas privadas (baseadas em convites com controlo de permissões, perfeitas para grupos fechados como amigos, família ou equipas).",
+    },
+    impact: {
+      en: "Enables transparent and collaborative fundraising through a digital-first approach, with full transaction traceability and flexible campaign management for both public and private use cases.",
+      pt: "Permite angariação de fundos transparente e colaborativa através de uma abordagem digital, com rastreabilidade total de transações e gestão flexível de campanhas para casos de uso públicos e privados.",
+    },
+    role: {
+      en: "Full-stack development, blockchain integration, and platform architecture.",
+      pt: "Desenvolvimento full-stack, integração blockchain e arquitetura da plataforma.",
+    },
+    stack: ["React", "Node.js", "NestJS", "PostgreSQL", "Blockchain"],
+  },
 ];
 
 export const skills = {

@@ -1,0 +1,15 @@
+Projeto Boa Saúde
+Definição
+O Boa Saúde é uma plataforma de telemedicina que conecta pacientes a médicos independentes para consultas remotas, integrando também um diretório geolocalizado de clínicas e hospitais. O objetivo é democratizar o acesso à saúde, oferecendo atendimento médico conveniente e acessível, enquanto cria oportunidades de renda para profissionais de saúde.
+Mecânica
+A plataforma opera através de aplicativo móvel e web, permitindo que:
+
+Pacientes agendem e realizem consultas médicas online por vídeo ou telefone, recebam orientações de saúde e localizem clínicas e hospitais próximos com base em geolocalização;
+Médicos independentes registem-se na plataforma, definam sua disponibilidade e atendam pacientes remotamente, gerando renda principal ou complementar;
+Clínicas e hospitais cadastrem seus serviços, localização e catálogo de exames/procedimentos disponíveis, facilitando o encaminhamento dos pacientes.
+
+O modelo conecta toda a cadeia de cuidados de saúde num ecossistema digital integrado.
+Justificação
+Angola enfrenta desafios significativos no acesso à saúde: concentração de profissionais nas grandes cidades, longas filas de espera, custos elevados de deslocação e dificuldade em encontrar especialistas disponíveis. Simultaneamente, muitos médicos procuram fontes de renda adicional. O Boa Saúde responde a esta dupla necessidade, eliminando barreiras geográficas e temporais no acesso a cuidados médicos, optimizando o tempo dos profissionais de saúde e proporcionando aos pacientes conveniência, rapidez e transparência na localização de serviços essenciais.
+
+Tecnologias: React, node + nestjs, postgre

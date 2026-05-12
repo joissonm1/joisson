@@ -1,0 +1,22 @@
+O SmartQuote foi um projeto desenvolvido em hackathon, onde recebemos o seguinte desafio:
+
+Problema (o que nos trouxeram)
+Empresas que lidam com procurement/vendas recebem pedidos de cotação por e-mail (muitas vezes com anexos, listas de itens e requisitos). O processo tradicional é manual e lento, gera erros e duplicações, e dificulta rastreabilidade/auditoria e controle de aprovações (principalmente em cotações de alto valor).
+
+Solução (o que entregamos)
+Criamos o SmartQuote, uma plataforma web que transforma o fluxo de cotação em um pipeline automatizado: captura do pedido → interpretação com IA → consulta/contato de fornecedores → comparação de propostas → geração da cotação → workflow de aprovação → histórico e analytics. O foco é reduzir tempo operacional, padronizar respostas e aumentar controle/compliance.
+
+Como a IA entra (o “cérebro” do sistema)
+
+NLP (Processamento de Linguagem Natural) para ler o e-mail e extrair informações estruturadas: cliente, itens, quantidades, especificações, prazos e observações.
+Classificação e normalização para transformar texto “solto” em campos consistentes (ex.: nomes de itens, unidades, categorias).
+Sugestão/validação de preços com base em histórico e catálogo, e suporte à comparação inteligente entre propostas de fornecedores.
+Assistente com IA para consultas rápidas (ex.: status da cotação, melhores fornecedores por categoria, justificativas e contexto do pedido).
+Dados (o que o sistema usa e gera)
+
+Entrada: e-mails de solicitação, corpo do e-mail, metadados (remetente/data), anexos (quando aplicável), e formulários.
+Base interna: cadastro de fornecedores, catálogo/itens, histórico de cotações e regras de aprovação (por valor/perfil).
+Saída: cotação gerada (itens + preços + condições), trilha de aprovação (quem aprovou/rejeitou e quando), e logs auditáveis de cada etapa.
+Métricas/Analytics: tempo de processamento, volume por período, taxa de aprovação/rejeição e indicadores de desempenho do pipeline.
+
+Tecnologias: React, node + nestjs, postgre, python
