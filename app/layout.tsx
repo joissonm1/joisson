@@ -14,6 +14,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://joisson.me"),
   title: {
     default: "Joisson Miguel | Data Analyst & Software Engineer",
     template: "%s | Joisson Miguel",
@@ -33,6 +34,20 @@ export const metadata: Metadata = {
     description:
       "Transforming data into decisions and engineering digital solutions with measurable impact.",
     type: "website",
+    url: "/",
+    images: [
+      {
+        url: "/sem_fundo.png",
+        alt: "Joisson Miguel | Data Analyst & Software Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Joisson Miguel | Data Analyst & Software Engineer",
+    description:
+      "Transforming data into decisions and engineering digital solutions with measurable impact.",
+    images: ["/sem_fundo.png"],
   },
   icons: {
     icon: [{ url: "/sem_fundo.png", type: "image/png", sizes: "192x192" }],
