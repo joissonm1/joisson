@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { FiDownload, FiMoon, FiSun } from "react-icons/fi";
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState, useRef, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import { content } from "@/lib/portfolio-content";
 import { usePreferences } from "@/components/preferences-provider";
+
 import Image from "next/image";
 
 type SiteShellProps = {
@@ -69,65 +70,74 @@ export function SiteShell({
   }, [clickedNav]);
 
   useEffect(() => {
-    if (isProjectsPage) {
-      return;
+  if (isProjectsPage) {
+    return;
+  }
+
+  const ids = ["hero", "about", "skills", "projects", "contact"] as const;
+
+  const sections = ids
+    .map((id) => document.getElementById(id))
+    .filter((section): section is HTMLElement => section !== null);
+
+  if (!sections.length) return;
+
+  const mapIdToTab = (id: string) =>
+    id === "hero"
+      ? "home"
+      : (id as "about" | "skills" | "projects" | "contact");
+
+  const updateActiveSection = () => {
+    // Linha imaginária que determina a secção activa.
+    const activationPoint = window.scrollY + window.innerHeight * 0.45;
+
+    let currentSection = sections[0];
+
+    for (const section of sections) {
+      const sectionPosition =
+        section.getBoundingClientRect().top + window.scrollY;
+
+      if (sectionPosition <= activationPoint) {
+        currentSection = section;
+      }
     }
 
-    const ids = ["hero", "about", "skills", "projects", "contact"] as const;
-    const sections = ids
-      .map((id) => document.getElementById(id))
-      .filter((section): section is HTMLElement => !!section);
+    // Ao chegar ao fundo da página, activa Contacto.
+    const isAtBottom =
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 10;
 
-    if (!sections.length) {
-      return;
+    if (isAtBottom) {
+      currentSection =
+        sections.find((section) => section.id === "contact") ??
+        sections[sections.length - 1];
     }
 
-    const mapIdToTab = (id: string) =>
-      id === "hero"
-        ? "home"
-        : (id as "about" | "skills" | "projects" | "contact");
+    setActiveNav(mapIdToTab(currentSection.id));
+  };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntries = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+  const applyHashState = () => {
+    const hashId = window.location.hash.replace("#", "");
 
-        if (!visibleEntries.length) {
-          return;
-        }
+    if (hashId && ids.includes(hashId as (typeof ids)[number])) {
+      setActiveNav(mapIdToTab(hashId));
+    }
+  };
 
-        const topVisible = visibleEntries[0];
-        const sectionId = (topVisible.target as HTMLElement).id;
-        setActiveNav(mapIdToTab(sectionId));
-      },
-      {
-        threshold: [0.35, 0.55, 0.75],
-        rootMargin: "-16% 0px -55% 0px",
-      },
-    );
+  window.addEventListener("scroll", updateActiveSection, {
+    passive: true,
+  });
 
-    sections.forEach((section) => observer.observe(section));
+  window.addEventListener("hashchange", applyHashState);
 
-    const applyHashState = () => {
-      const hashId = window.location.hash.replace("#", "");
-      if (!hashId) {
-        return;
-      }
+  updateActiveSection();
+  applyHashState();
 
-      if (ids.includes(hashId as (typeof ids)[number])) {
-        setActiveNav(mapIdToTab(hashId));
-      }
-    };
-
-    applyHashState();
-    window.addEventListener("hashchange", applyHashState);
-
-    return () => {
-      window.removeEventListener("hashchange", applyHashState);
-      observer.disconnect();
-    };
-  }, [isProjectsPage, pathname]);
+  return () => {
+    window.removeEventListener("scroll", updateActiveSection);
+    window.removeEventListener("hashchange", applyHashState);
+  };
+}, [isProjectsPage, pathname]);
 
   return (
     <div className="relative min-h-screen overflow-x-clip">
