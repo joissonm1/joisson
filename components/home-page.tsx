@@ -23,13 +23,18 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import {
+  FaArrowRight,
   FaChartBar,
   FaChartLine,
   FaChartPie,
   FaDatabase,
+  FaEnvelope,
   FaFileExcel,
+  FaGraduationCap,
+  FaLightbulb,
   FaPython,
   FaServer,
+  FaUsers,
 } from "react-icons/fa";
 import { SiteShell } from "@/components/site-shell";
 import { ProjectCarousel } from "@/components/project-carousel";
@@ -113,6 +118,25 @@ function SkillTag({ label }: { label: string }) {
   );
 }
 
+const traitIcons: Record<string, IconType> = {
+  data: FaChartLine,
+  projects: FaUsers,
+  learning: FaGraduationCap,
+  impact: FaLightbulb,
+};
+
+function SectionHead({ index, title }: { index: string; title: string }) {
+  return (
+    <div className="section-head">
+      <span className="section-index" aria-hidden="true">
+        {index}
+      </span>
+      <h2 className="section-title">{title}</h2>
+      <span className="section-rule" aria-hidden="true" />
+    </div>
+  );
+}
+
 export function HomePage() {
   const { locale } = usePreferences();
   const text = content[locale];
@@ -128,51 +152,85 @@ export function HomePage() {
 
   return (
     <SiteShell>
-      <main className="mx-auto flex w-[min(94vw,72rem)] flex-col gap-16 pb-20 pt-32 md:pt-36">
-        <section
-          id="hero"
-          className="flex min-h-[72vh] items-center justify-center"
-        >
-          <div
-            data-reveal
-            className="reveal slide-up flex max-w-4xl flex-col items-center space-y-8 text-center"
-          >
-            <p className="hero-name">{text.hero.name}</p>
-            <h1 className="text-5xl font-bold leading-tight md:text-7xl">
-              {text.hero.headline}
+      <section id="hero" className="hero-stage">
+        <div className="hero-photo" aria-hidden="true">
+          <Image
+            src="/joisson.jpeg"
+            alt=""
+            fill
+            sizes="(max-width: 900px) 100vw, 34rem"
+            priority
+          />
+        </div>
+
+        <div className="hero-inner">
+          <div data-reveal className="reveal slide-up hero-copy">
+            <p className="hero-kicker">{text.hero.greeting}</p>
+            <h1 className="hero-title">
+              <span>{text.hero.firstName}</span>
+              <span className="is-last">{text.hero.lastName}</span>
             </h1>
-            <div className="flex flex-wrap items-center justify-center gap-3">
+            <p className="hero-roles">
+              {text.hero.roles.map((role, index) => (
+                <span key={role}>
+                  {index > 0 ? <span className="sep">|</span> : null}
+                  {role}
+                </span>
+              ))}
+            </p>
+            <p className="hero-tagline">{text.hero.subheadline}</p>
+            <div className="hero-actions">
               <Link className="action-button" href="/projects">
                 {text.hero.ctaProjects}
+                <FaArrowRight aria-hidden="true" />
               </Link>
               <a className="action-button ghost" href="#contact">
+                <FaEnvelope aria-hidden="true" />
                 {text.hero.ctaContact}
               </a>
             </div>
-            <a className="scroll-down" href="#about" aria-label="Scroll down" />
           </div>
-        </section>
+        </div>
 
-        <section
-          id="about"
-          data-reveal
-          className="reveal slide-up glass-panel rounded-3xl p-6 md:p-9"
-        >
-          <h2 className="section-title">{text.about.title}</h2>
-          <p className="mt-4 max-w-3xl text-muted leading-8">
-            {text.about.summary}
-          </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {text.about.highlights.map((item) => (
-              <span key={item} className="pill">
-                {item}
-              </span>
+        <a className="hero-scroll" href="#about">
+          {text.hero.scroll}
+        </a>
+      </section>
+
+      <main className="mx-auto flex w-[min(94vw,72rem)] flex-col gap-16 pb-20 pt-10">
+        <section id="about" data-reveal className="reveal slide-up">
+          <SectionHead index="01" title={text.about.title} />
+
+          <div className="about-intro mt-4">
+            {text.about.intro.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
             ))}
+          </div>
+
+          <div className="about-traits">
+            {text.about.traits.map((trait, index) => {
+              const Icon = traitIcons[trait.key];
+
+              return (
+                <article key={trait.key} className="trait-card">
+                  <div className="trait-head">
+                    <span className="trait-icon">
+                      <Icon aria-hidden="true" />
+                    </span>
+                    <span className="trait-index" aria-hidden="true">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3 className="trait-title">{trait.title}</h3>
+                  <p className="trait-description">{trait.description}</p>
+                </article>
+              );
+            })}
           </div>
         </section>
 
         <section id="skills" data-reveal className="reveal slide-up space-y-5">
-          <h2 className="section-title">{text.skills.title}</h2>
+          <SectionHead index="02" title={text.skills.title} />
           <p className="text-muted">{text.skills.subtitle}</p>
           <div className="skills-rows">
             {skillRows.map((group) => (
@@ -193,7 +251,7 @@ export function HomePage() {
           data-reveal
           className="reveal slide-up space-y-5"
         >
-          <h2 className="section-title">{text.projects.title}</h2>
+          <SectionHead index="03" title={text.projects.title} />
           <p className="text-muted">{text.projects.subtitle}</p>
           <div className="grid gap-4 md:grid-cols-2">
             {featuredProjects.map((project) => (
@@ -251,27 +309,6 @@ export function HomePage() {
             <Link className="action-button ghost" href="/projects">
               {text.projects.viewAll}
             </Link>
-          </div>
-        </section>
-
-        <section
-          data-reveal
-          className="reveal slide-up glass-panel rounded-3xl p-6 md:p-9"
-        >
-          <h2 className="section-title">{text.identity.title}</h2>
-          <p className="mt-3 text-muted">{text.identity.subtitle}</p>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {text.identity.metrics.map((metric) => (
-              <div key={metric.label} className="metric-tile">
-                <div className="text-sm uppercase tracking-[0.14em] text-muted">
-                  {metric.label}
-                </div>
-                <div className="mt-2 text-3xl font-semibold">
-                  {metric.value}
-                </div>
-                <div className="sparkline" />
-              </div>
-            ))}
           </div>
         </section>
 
@@ -335,7 +372,7 @@ export function HomePage() {
           data-reveal
           className="reveal slide-up glass-panel rounded-3xl p-6 md:p-9"
         >
-          <h2 className="section-title">{text.contact.title}</h2>
+          <SectionHead index="04" title={text.contact.title} />
           <p className="mt-2 text-muted">{text.contact.subtitle}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a

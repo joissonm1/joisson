@@ -1,11 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { FiDownload, FiMoon, FiSun } from "react-icons/fi";
 import { useEffect, useState, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import { content } from "@/lib/portfolio-content";
 import { usePreferences } from "@/components/preferences-provider";
+import Image from "next/image";
 
 type SiteShellProps = {
   children: ReactNode;
@@ -20,7 +21,6 @@ export function SiteShell({
   const { locale, setLocale, theme, setTheme } = usePreferences();
   const labels = content[locale];
   const year = new Date().getFullYear();
-  const [cursor, setCursor] = useState({ x: -500, y: -500 });
   const [activeNav, setActiveNav] = useState<
     "home" | "about" | "skills" | "projects" | "contact"
   >(isProjectsPage && pathname.startsWith("/projects") ? "projects" : "home");
@@ -55,15 +55,6 @@ export function SiteShell({
     setActiveNav(tab);
     setClickedNav(tab);
   };
-
-  useEffect(() => {
-    const updateCursor = (event: MouseEvent) => {
-      setCursor({ x: event.clientX, y: event.clientY });
-    };
-
-    window.addEventListener("mousemove", updateCursor);
-    return () => window.removeEventListener("mousemove", updateCursor);
-  }, []);
 
   useEffect(() => {
     if (!clickedNav) {
@@ -140,30 +131,20 @@ export function SiteShell({
 
   return (
     <div className="relative min-h-screen overflow-x-clip">
-      <div
-        className="pointer-events-none fixed inset-0 z-10 opacity-70"
-        style={{
-          background: `radial-gradient(520px circle at ${cursor.x}px ${cursor.y}px, color-mix(in oklab, var(--accent-400) 22%, transparent), transparent 55%)`,
-        }}
-      />
+      <header className="site-header">
+        <div className="nav-bar">
+          <Link className="nav-brand" href="/" aria-label="Joisson Miguel — início">
+          <Image
+            src="/sem_fundo.png"
+            alt="Joisson Miguel"
+            width={45}
+            height={45}
+            className="nav-avatar"
+            priority
+          />
+        </Link>
 
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-layer-grid" />
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-layer-noise" />
-      <div className="pointer-events-none fixed -top-52 left-1/2 -z-10 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-orb blur-3xl" />
-      <div className="pointer-events-none fixed inset-x-0 top-0 z-20 h-24 bg-top-scrim" />
-
-      <header className="fixed left-1/2 top-4 z-30 w-[min(94vw,64rem)] -translate-x-1/2">
-        <div className="glass-panel flex items-center justify-between gap-2 rounded-2xl px-3 py-2 md:px-4">
-          <div className="avatar-chip" aria-label="Profile avatar">
-            <Image
-              src="/sem_fundo.png"
-              alt="Joisson Miguel avatar"
-              width={34}
-              height={34}
-            />
-          </div>
-
-          <nav className="mx-auto flex items-center gap-1 text-xs uppercase tracking-[0.18em] md:text-sm">
+          <nav className="nav-links">
             {isProjectsPage ? (
               <>
                 <Link
@@ -229,32 +210,51 @@ export function SiteShell({
             )}
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="nav-controls">
+            <div className="lang-switch">
+              {(["pt", "en"] as const).map((code) => (
+                <button
+                  key={code}
+                  type="button"
+                  className={`lang-option${locale === code ? " is-active" : ""}`}
+                  onClick={() => setLocale(code)}
+                  aria-pressed={locale === code}
+                  aria-label={code === "pt" ? "Português" : "English"}
+                >
+                  {code.toUpperCase()}
+                </button>
+              ))}
+            </div>
+
             <button
               type="button"
-              className="control-button"
-              onClick={() => setLocale(locale === "en" ? "pt" : "en")}
-              aria-label="Toggle language"
+              className="icon-button"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              aria-label={
+                theme === "dark"
+                  ? locale === "pt"
+                    ? "Mudar para tema claro"
+                    : "Switch to light theme"
+                  : locale === "pt"
+                    ? "Mudar para tema escuro"
+                    : "Switch to dark theme"
+              }
             >
-              {labels.controls.language}
+              {theme === "dark" ? (
+                <FiSun aria-hidden="true" />
+              ) : (
+                <FiMoon aria-hidden="true" />
+              )}
             </button>
 
             <a
-              className="control-button"
+              className="nav-cta"
               href={`/api/cv?locale=${locale}`}
-              aria-label="Download CV"
+              aria-label={locale === "pt" ? "Descarregar CV" : "Download CV"}
             >
+              <FiDownload aria-hidden="true" />
               CV
             </a>
-
-            <button
-              type="button"
-              className="control-button"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? labels.controls.light : labels.controls.dark}
-            </button>
           </div>
         </div>
       </header>

@@ -183,24 +183,49 @@ export const content = {
       light: "Light",
     },
     hero: {
+      greeting: "Hello, I am",
+      firstName: "Joisson",
+      lastName: "Miguel",
       name: "Joisson Miguel",
+      roles: ["Data Analyst", "Software Engineer"],
       headline: "Data Analyst & Software Engineer",
       subheadline:
         "Transforming data into decisions and engineering digital solutions with measurable impact.",
-      ctaProjects: "View Projects",
-      ctaContact: "Contact",
+      ctaProjects: "View My Work",
+      ctaContact: "Get in Touch",
+      scroll: "Scroll",
     },
     about: {
       title: "About Me",
-      summary:
-        "Computer Engineering student with experience as a Project Manager, focused on Data Analysis and digital solutions that optimize processes and support better decisions.",
-      highlights: [
-        "Analytical thinking",
-        "Problem solving",
-        "Data communication",
-        "Leadership",
-        "Proactivity",
-        "Collaboration",
+      intro: [
+        "Final-year Computer Engineering student at ISPTEC and a 42 Luanda alumnus. I have worked as a Project Manager and I focus on Data Analysis — turning data into information that actually supports decisions.",
+        "Alongside that, I have experience building technology solutions, managing projects and working in a team. I am driven by continuous learning and by the urge to solve real problems through technology.",
+      ],
+      traits: [
+        {
+          key: "data",
+          title: "Data Analysis",
+          description:
+            "Turning scattered data into information that holds up when a decision depends on it.",
+        },
+        {
+          key: "projects",
+          title: "Project Management",
+          description:
+            "Experience as a Project Manager: planning, coordinating and delivering alongside a team.",
+        },
+        {
+          key: "learning",
+          title: "Continuous Learning",
+          description:
+            "42 Luanda alumnus — peer-to-peer, project-based learning, and the habit of never stopping.",
+        },
+        {
+          key: "impact",
+          title: "Real Problems",
+          description:
+            "Technology applied to concrete problems, from understanding the need to shipping it.",
+        },
       ],
     },
     skills: {
@@ -424,24 +449,49 @@ export const content = {
       light: "Claro",
     },
     hero: {
+      greeting: "Olá, eu sou",
+      firstName: "Joisson",
+      lastName: "Miguel",
       name: "Joisson Miguel",
+      roles: ["Analista de Dados", "Engenheiro de Software"],
       headline: "Analista de Dados & Engenheiro de Software",
       subheadline:
         "Transformando dados em decisões e construindo soluções digitais com impacto mensurável.",
       ctaProjects: "Ver Projetos",
-      ctaContact: "Contato",
+      ctaContact: "Entrar em Contacto",
+      scroll: "Scroll",
     },
     about: {
       title: "Sobre Mim",
-      summary:
-        "Estudante de Engenharia Informática com experiência como Project Manager, focado em Análise de Dados e soluções digitais para otimizar processos e apoiar melhores decisões.",
-      highlights: [
-        "Pensamento analítico",
-        "Resolução de problemas",
-        "Comunicação de dados",
-        "Liderança",
-        "Proatividade",
-        "Colaboração",
+      intro: [
+        "Estudante finalista de Engenharia Informática no ISPTEC e alumni da 42 Luanda. Com experiência como Project Manager e focado em Análise de Dados e na transformação de dados em informação relevante para a tomada de decisões.",
+        "Além de experiência no desenvolvimento de soluções tecnológicas, gestão de projetos e trabalho em equipa. Sou movido pela aprendizagem contínua e pela vontade de resolver problemas reais através da tecnologia.",
+      ],
+      traits: [
+        {
+          key: "data",
+          title: "Análise de Dados",
+          description:
+            "Transformar dados dispersos em informação que se aguenta quando há uma decisão a depender dela.",
+        },
+        {
+          key: "projects",
+          title: "Gestão de Projetos",
+          description:
+            "Experiência como Project Manager: planear, coordenar e entregar ao lado de uma equipa.",
+        },
+        {
+          key: "learning",
+          title: "Aprendizagem Contínua",
+          description:
+            "Alumni da 42 Luanda — aprendizagem entre pares, baseada em projetos, e o hábito de não parar.",
+        },
+        {
+          key: "impact",
+          title: "Problemas Reais",
+          description:
+            "Tecnologia aplicada a problemas concretos, desde perceber a necessidade até entregar.",
+        },
       ],
     },
     skills: {
@@ -643,7 +693,7 @@ export const content = {
       },
     },
     contact: {
-      title: "Contato",
+      title: "Contacto",
       subtitle:
         "Aberto a oportunidades em Análise de Dados e Engenharia de Software.",
       email: "Email",
