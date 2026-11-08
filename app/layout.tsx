@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sora, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import "./projects.css";
 import { PreferencesProvider } from "@/components/preferences-provider";
 
 const sora = Sora({

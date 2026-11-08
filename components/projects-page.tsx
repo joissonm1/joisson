@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
-import { ProjectCarousel } from "@/components/project-carousel";
+import { ProjectTile } from "@/components/project-cards";
 import { SiteShell } from "@/components/site-shell";
 import { usePreferences } from "@/components/preferences-provider";
 import { content, projects } from "@/lib/portfolio-content";
@@ -31,72 +30,16 @@ export function ProjectsPage() {
           </p>
         </section>
 
-        <section className="grid gap-4 md:grid-cols-2">
-          {projects.map((project) => (
-            <article
+        <section className="project-tiles is-two-cols">
+          {projects.map((project, index) => (
+            <ProjectTile
               key={project.slug}
-              data-reveal
-              className="reveal slide-up project-card"
-            >
-              {project.gallery?.length ? (
-                <ProjectCarousel
-                  images={project.gallery}
-                  title={project.title}
-                />
-              ) : (
-                <div className="project-preview-media">
-                  <Image
-                    src={project.image}
-                    alt={`${project.title} preview`}
-                    width={1200}
-                    height={700}
-                  />
-                </div>
-              )}
-
-              <div>
-                <h2 className="text-2xl font-semibold">{project.title}</h2>
-                <p className="mt-3 text-muted leading-7">
-                  {project.longDescription[locale]}
-                </p>
-                <p className="mt-4 text-sm uppercase tracking-[0.14em] text-muted">
-                  {text.projects.impactLabel}
-                </p>
-                <p className="mt-1 leading-7">{project.impact[locale]}</p>
-              </div>
-
-              <div>
-                <p className="mb-2 text-sm uppercase tracking-[0.14em] text-muted">
-                  {text.projects.stackLabel}
-                </p>
-                <div className="tag-wrap">
-                  {project.stack.map((item) => (
-                    <span key={item} className="tag">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-2">
-                <Link
-                  className="inline-link"
-                  href={`/projects/${project.slug}`}
-                >
-                  {text.projects.details}
-                </Link>
-                {project.liveUrl ? (
-                  <a
-                    className="inline-link"
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {text.projects.visitProject}
-                  </a>
-                ) : null}
-              </div>
-            </article>
+              project={project}
+              index={index}
+              locale={locale}
+              detailsLabel={text.projects.details}
+              className="reveal slide-up"
+            />
           ))}
         </section>
 

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProjectCarousel } from "@/components/project-carousel";
+import { AchievementBadge } from "@/components/achievement-tile";
 import { SiteShell } from "@/components/site-shell";
 import { usePreferences } from "@/components/preferences-provider";
 import { content } from "@/lib/portfolio-content";
@@ -47,10 +48,11 @@ export function AchievementDetailPage({ slug }: AchievementDetailPageProps) {
     <SiteShell isProjectsPage>
       <main className="mx-auto flex w-[min(94vw,72rem)] flex-col gap-8 pb-20 pt-32 md:pt-36">
         <section data-reveal className="reveal slide-up space-y-3">
+          <AchievementBadge label={achievement.badge} inline />
           <h1 className="text-4xl font-bold md:text-5xl">
             {achievement.title}
           </h1>
-          <p className="max-w-3xl leading-8 text-muted">
+          <p className="text-justify-hyphen max-w-3xl leading-8 text-muted">
             {achievement.description}
           </p>
         </section>
@@ -81,21 +83,21 @@ export function AchievementDetailPage({ slug }: AchievementDetailPageProps) {
           >
             <div>
               <p className="achievement-label">{labels.context}</p>
-              <p className="mt-1 leading-7 text-muted">
+              <p className="text-justify-hyphen mt-1 leading-7 text-muted">
                 {achievement.details.context}
               </p>
             </div>
 
             <div>
               <p className="achievement-label">{labels.challenge}</p>
-              <p className="mt-1 leading-7 text-muted">
+              <p className="text-justify-hyphen mt-1 leading-7 text-muted">
                 {achievement.details.challenge}
               </p>
             </div>
 
             <div>
               <p className="achievement-label">{labels.solution}</p>
-              <p className="mt-1 leading-7 text-muted">
+              <p className="text-justify-hyphen mt-1 leading-7 text-muted">
                 {achievement.details.solution}
               </p>
             </div>

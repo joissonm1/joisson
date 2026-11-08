@@ -9,10 +9,12 @@ export function useRevealOnScroll() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          // Revela uma única vez. Esconder de novo ao sair do ecrã criava um
+          // ciclo no limite: o deslocamento de 36px voltava a pôr o elemento
+          // dentro do threshold, e ele ficava a piscar.
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
-          } else {
-            entry.target.classList.remove("is-visible");
+            observer.unobserve(entry.target);
           }
         });
       },

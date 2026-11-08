@@ -22,6 +22,10 @@ export type Project = {
     en: string;
     pt: string;
   };
+  category: {
+    en: string;
+    pt: string;
+  };
   stack: string[];
 };
 
@@ -54,6 +58,10 @@ export const projects: Project[] = [
       en: "Product strategy, analytics definition, and full-stack implementation.",
       pt: "Estratégia de produto, definição de métricas analíticas e implementação full-stack.",
     },
+    category: {
+      en: "EdTech · Careers",
+      pt: "EdTech · Carreiras",
+    },
     stack: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL"],
   },
   {
@@ -83,6 +91,10 @@ export const projects: Project[] = [
     role: {
       en: "Full-stack development and product architecture design.",
       pt: "Desenvolvimento full-stack e design da arquitetura do produto.",
+    },
+    category: {
+      en: "HealthTech",
+      pt: "HealthTech",
     },
     stack: ["React", "Node.js", "NestJS", "PostgreSQL"],
   },
@@ -115,6 +127,10 @@ export const projects: Project[] = [
       en: "Full-stack development with AI integration and system architecture.",
       pt: "Desenvolvimento full-stack com integração de IA e arquitetura do sistema.",
     },
+    category: {
+      en: "AI · Procurement",
+      pt: "IA · Procurement",
+    },
     stack: ["React", "Node.js", "NestJS", "PostgreSQL", "Python"],
   },
   {
@@ -144,6 +160,10 @@ export const projects: Project[] = [
     role: {
       en: "Full-stack development, blockchain integration, and platform architecture.",
       pt: "Desenvolvimento full-stack, integração blockchain e arquitetura da plataforma.",
+    },
+    category: {
+      en: "Fintech · 42 Luanda",
+      pt: "Fintech · 42 Luanda",
     },
     stack: ["React", "Node.js", "NestJS", "PostgreSQL", "Blockchain"],
   },
@@ -253,6 +273,13 @@ export const content = {
       allProjectsSubtitle:
         "Detailed view of architecture, impact, and decision-making process.",
       backHome: "Back to Home",
+      featuredLabel: "Featured project",
+      moreProjects: "More projects",
+      projectLabel: "Project",
+      overviewLabel: "Overview",
+      factsLabel: "Project sheet",
+      categoryLabel: "Category",
+      roleLabel: "Role",
     },
     identity: {
       title: "Analyst Identity",
@@ -338,10 +365,12 @@ export const content = {
           cards: [
             {
               slug: "olimpiadas-2026",
-              title: "1st Place - Olympics Hackathon",
+              badge: "1st place",
+              meta: ["2026", "National"],
+              title: "Olympics Hackathon",
               description:
                 "At the 2026 Angolan Youth Knowledge and Talent Olympics, representing ISPTEC, our team won the hackathon. Challenge: how to connect universities to the job market. We built Unibridge, a digital platform that connects students, employers, professors, and universities in one ecosystem with personalized recommendations, progress tracking, and professional profiles.",
-              image: "/Olimpiadas/1.png",
+              image: "/Olimpiadas/3.jpeg",
               gallery: [
                 "/Olimpiadas/1.png",
                 "/Olimpiadas/2.png",
@@ -378,13 +407,17 @@ export const content = {
             },
             {
               slug: "mapazzz-hackathon",
-              title: "2nd Place - Mapazzz Hackathon",
+              badge: "2nd place",
+              meta: ["42 Luanda", "Hackathon"],
+              title: "Mapazzz Hackathon",
               description:
                 "Participation in the 1st 42 Luanda Hackathon as part of Team Macrofagos, where we developed MapaZZZ, an intelligent and inclusive mobile solution focused on mapping, monitoring, and mitigating malaria, particularly in low-connectivity regions. Within a limited timeframe, we delivered a fully functional end-to-end system that combined artificial intelligence, offline-first capabilities, USSD communication, and climate data analysis to identify and predict high-risk areas. To enhance the platform's impact, we also integrated teleconsultation modules, enabling users to access basic medical guidance remotely, bridging gaps between communities and healthcare services. The project stood out for its innovative approach, technical depth, and strong commitment to social impact, reinforced by a compelling final presentation.",
               image: "/hackathons/mapazzz-hackathon.svg",
             },
             {
               slug: "programacao-competitiva",
+              badge: "4th place",
+              meta: ["2025", "ISPTEC"],
               title: "Competitive Programming",
               description:
                 "Our team participated in the ISPTEC Programming Marathon in 2025 and finished 4th place among more than 15 teams. The competition involved complex challenges in algorithms and data structures, requiring speed, logical reasoning, and strong teamwork.",
@@ -392,6 +425,8 @@ export const content = {
             },
             {
               slug: "nossa-seguros-hackathon",
+              badge: "Participation",
+              meta: ["NOSSA Seguros", "Hackathon"],
               title: "NOSSA Seguros Hackathon",
               description:
                 "Participation in the NOSSA Seguros Hackathon across three intense and challenging days. Although we did not win this edition, we left with equally valuable outcomes: practical learning, stronger teamwork, and hands-on experience solving real problems under pressure.",
@@ -520,6 +555,13 @@ export const content = {
       allProjectsSubtitle:
         "Visão detalhada de arquitetura, impacto e processo de decisão.",
       backHome: "Voltar ao Início",
+      featuredLabel: "Projeto em destaque",
+      moreProjects: "Mais projetos",
+      projectLabel: "Projeto",
+      overviewLabel: "Visão geral",
+      factsLabel: "Ficha do projeto",
+      categoryLabel: "Categoria",
+      roleLabel: "Função",
     },
     identity: {
       title: "Identidade Analítica",
@@ -604,11 +646,13 @@ export const content = {
           cards: [
             {
               slug: "olimpiadas-2026",
+              badge: "1.º lugar",
+              meta: ["2026", "Nacional"],
               title:
-                "1 Lugar - Hackthon Olimpíadas do Saber e Talento Juvenil Angolano 2026",
+                "Hackathon Olimpíadas do Saber e Talento Juvenil Angolano 2026",
               description:
                 "Olimpíadas do Saber e Talento Juvenil Angolano 2026, representando o ISPTEC, e saímos vencedores do hackathon. O desafio proposto foi: como aproximar as universidades ao mercado de trabalho? A nossa solução foi a Unibridge, uma plataforma digital que conecta estudantes, empregadores, professores e universidades num único ecossistema, com recomendações personalizadas, acompanhamento de progresso e perfis profissionais. Equipa - Backend: Jesse Ingles, Willfredy Vieira Dias e Sebastião Sukuakueche; Infraestrutura: Victor Kangombe; Frontend: Joisson Miguel e Orisa Melzira Ebo.",
-              image: "/Olimpiadas/1.png",
+              image: "/Olimpiadas/3.jpeg",
               gallery: [
                 "/Olimpiadas/1.png",
                 "/Olimpiadas/2.png",
@@ -645,6 +689,8 @@ export const content = {
             },
             {
               slug: "mapazzz-hackathon",
+              badge: "2.º lugar",
+              meta: ["42 Luanda", "Hackathon"],
               title: "Hackathon Mapazzz (42 Luanda)",
               description:
                 "Participação no 1º Hackathon da 42 Luanda como parte da Team Macrofagos, onde desenvolvemos o MapaZZZ, uma solução mobile inteligente e inclusiva focada no mapeamento, monitorização e mitigação da malária, especialmente em regiões com baixa conectividade. Em tempo limitado, entregamos um sistema completo ponta a ponta que combinou inteligência artificial, abordagem offline-first, comunicação via USSD e análise de dados climáticos para identificar e prever zonas de alto risco. Para ampliar o impacto da plataforma, integramos também módulos de teleconsulta, permitindo aos utilizadores aceder orientação médica básica remotamente, reduzindo distâncias entre comunidades e serviços de saúde. O projeto destacou-se pela abordagem inovadora, profundidade técnica e forte compromisso com impacto social, reforçado por uma apresentação final convincente.",
@@ -652,6 +698,8 @@ export const content = {
             },
             {
               slug: "programacao-competitiva",
+              badge: "4.º lugar",
+              meta: ["2025", "ISPTEC"],
               title: "Programação Competitiva",
               description:
                 "O meu time participou na Maratona de Programação do ISPTEC no ano de 2025 e ficou em 4 lugar entre mais de 15 equipas. A competição envolveu desafios complexos de algoritmos e estruturas de dados, exigindo rapidez, raciocínio lógico e forte colaboração em equipa.",
@@ -659,6 +707,8 @@ export const content = {
             },
             {
               slug: "nossa-seguros-hackathon",
+              badge: "Participação",
+              meta: ["NOSSA Seguros", "Hackathon"],
               title: "Hackathon NOSSA Seguros",
               description:
                 "Participei do Hackathon da NOSSA Seguros durante três dias muito intensos e desafiadores. Tivemos a oportunidade de desenvolver uma solução para o problema proposto e, embora desta vez não tenhamos alcançado a vitória, saímos com algo igualmente valioso: aprendizado e experiência. Nem sempre se vence uma competição, mas cada desafio deixa lições importantes. Foi um ambiente incrível, com competição saudável, muito trabalho em equipe e inúmeros aprendizados ao longo de todo o hackathon. Agradeço a organização pela excelente iniciativa e a todos os envolvidos por proporcionarem essa experiência. Com certeza, nos próximos hackathons voltarei mais forte, mais preparado e ainda mais motivado.",

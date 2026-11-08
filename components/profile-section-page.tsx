@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { AchievementTile } from "@/components/achievement-tile";
 import { SiteShell } from "@/components/site-shell";
 import { usePreferences } from "@/components/preferences-provider";
 import { content } from "@/lib/portfolio-content";
@@ -56,35 +56,18 @@ export function ProfileSectionPage({ section }: ProfileSectionPageProps) {
             ))}
           </section>
         ) : hasAchievementCards ? (
-          <section className="grid gap-4 md:grid-cols-2">
+          <section className="project-tiles is-two-cols">
             {sectionData.cards.map((card) => (
-              <article
+              <AchievementTile
                 key={card.slug}
-                data-reveal
-                className="reveal slide-up project-card achievement-card"
-              >
-                <div className="project-preview-media achievement-media">
-                  <Image
-                    src={card.image}
-                    alt={`${card.title} image`}
-                    width={1200}
-                    height={700}
-                  />
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-semibold">{card.title}</h2>
-                  <p className="mt-3 leading-7 text-muted achievement-teaser">
-                    {card.description}
-                  </p>
-                  <Link
-                    className="inline-link mt-4"
-                    href={`/achievements/${card.slug}`}
-                  >
-                    {text.profile.viewMore}
-                  </Link>
-                </div>
-              </article>
+                slug={card.slug}
+                title={card.title}
+                description={card.description}
+                image={card.image}
+                badge={card.badge}
+                meta={card.meta}
+                detailsLabel={text.profile.viewMore}
+              />
             ))}
           </section>
         ) : hasItems ? (

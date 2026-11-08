@@ -37,7 +37,7 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { SiteShell } from "@/components/site-shell";
-import { ProjectCarousel } from "@/components/project-carousel";
+import { FeaturedProject, ProjectTile } from "@/components/project-cards";
 import { usePreferences } from "@/components/preferences-provider";
 import { content, projects, skills } from "@/lib/portfolio-content";
 import { useRevealOnScroll } from "@/hooks/use-reveal-on-scroll";
@@ -140,7 +140,7 @@ function SectionHead({ index, title }: { index: string; title: string }) {
 export function HomePage() {
   const { locale } = usePreferences();
   const text = content[locale];
-  const featuredProjects = projects.slice(0, 2);
+  const [featuredProject, ...otherProjects] = projects;
   const skillRows = [
     { title: text.skills.categories.data, items: skills.data },
     { title: text.skills.categories.programming, items: skills.programming },
@@ -197,7 +197,7 @@ export function HomePage() {
         </a>
       </section>
 
-      <main className="mx-auto flex w-[min(94vw,72rem)] flex-col gap-16 pb-20 pt-10">
+      <main className="mx-auto flex w-[min(94vw,72rem)] flex-col home-sections pb-20 pt-10">
         <section id="about" data-reveal className="reveal slide-up">
           <SectionHead index="01" title={text.about.title} />
 
@@ -253,61 +253,31 @@ export function HomePage() {
         >
           <SectionHead index="03" title={text.projects.title} />
           <p className="text-muted">{text.projects.subtitle}</p>
-          <div className="grid gap-4 md:grid-cols-2">
-            {featuredProjects.map((project) => (
-              <article key={project.slug} className="project-card">
-                {project.gallery?.length ? (
-                  <ProjectCarousel
-                    images={project.gallery}
-                    title={project.title}
-                  />
-                ) : (
-                  <div className="project-preview-media">
-                    <Image
-                      src={project.image}
-                      alt={`${project.title} preview`}
-                      width={1200}
-                      height={700}
-                    />
-                  </div>
-                )}
-
-                <div>
-                  <h3 className="text-2xl font-semibold">{project.title}</h3>
-                  <p className="project-teaser mt-3 text-muted leading-7">
-                    {project.shortDescription[locale]}...
-                  </p>
-                  <p className="mt-4 text-sm uppercase tracking-[0.14em] text-muted">
-                    {text.projects.impactLabel}
-                  </p>
-                  <p className="mt-1 leading-7">{project.impact[locale]}</p>
-                </div>
-
-                <div>
-                  <p className="mb-2 text-sm uppercase tracking-[0.14em] text-muted">
-                    {text.projects.stackLabel}
-                  </p>
-                  <div className="tag-wrap">
-                    {project.stack.map((item) => (
-                      <span key={item} className="tag">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <Link
-                  className="inline-link"
-                  href={`/projects/${project.slug}`}
-                >
-                  {text.projects.seeMore}
-                </Link>
-              </article>
+          {featuredProject ? (
+            <FeaturedProject
+              project={featuredProject}
+              index={0}
+              locale={locale}
+              label={text.projects.featuredLabel}
+              detailsLabel={text.projects.details}
+              visitLabel={text.projects.visitProject}
+            />
+          ) : null}
+          <div className="project-tiles">
+            {otherProjects.map((project, index) => (
+              <ProjectTile
+                key={project.slug}
+                project={project}
+                index={index + 1}
+                locale={locale}
+                detailsLabel={text.projects.details}
+              />
             ))}
           </div>
-          <div className="pt-2">
+          <div className="flex justify-center pt-2">
             <Link className="action-button ghost" href="/projects">
               {text.projects.viewAll}
+              <FaArrowRight aria-hidden="true" />
             </Link>
           </div>
         </section>
